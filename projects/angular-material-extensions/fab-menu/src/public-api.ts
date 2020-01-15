@@ -4,4 +4,4 @@
 
 export * from './lib/fab-menu.service';
 export * from './lib/fab-menu.component';
-export * from './lib/fab-menu.module';
+export * from './lib/mat-fab-menu.module';

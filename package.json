@@ -59,5 +59,28 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
     "webpack-cli": "^3.1.0"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@angular/animations",
+      "@angular/core",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/cdk",
+      "@angular/material",
+      "@angular/platform-server",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/compiler-cli",
+      "webpack",
+      "zone.js",
+      "rxjs",
+      "tslint",
+      "typescript",
+      "codelyzer",
+      "@types/jasmine",
+      "@types/jest",
+      "@types/node"
+    ]
   }
 }

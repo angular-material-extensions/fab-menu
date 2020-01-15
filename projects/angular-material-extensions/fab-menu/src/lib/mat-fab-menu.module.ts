@@ -9,4 +9,4 @@ import { FabMenuComponent } from './fab-menu.component';
   ],
   exports: [FabMenuComponent]
 })
-export class FabMenuModule { }
+export class MatFabMenuModule { }
