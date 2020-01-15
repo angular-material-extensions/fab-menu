@@ -1,8 +1,8 @@
-import { SchematicsException, Tree } from '@angular-devkit/schematics';
-import { targetBuildNotFoundError as originalTargetBuildNotFoundError } from '@schematics/angular/utility/project-targets';
+import {SchematicsException, Tree} from '@angular-devkit/schematics';
+import {targetBuildNotFoundError as originalTargetBuildNotFoundError} from '@schematics/angular/utility/project-targets';
 
-import { isWorkspaceProject, getProject } from './project';
-import { WorkspaceProject, WorkspaceSchema, WorkspaceTargets } from './workspace-models';
+import {getProject, isWorkspaceProject} from './project';
+import {WorkspaceProject, WorkspaceSchema, WorkspaceTargets} from './workspace-models';
 
 // TODO: Migrate to use the original source
 export function getProjectTargets(project: WorkspaceProject): WorkspaceTargets;
