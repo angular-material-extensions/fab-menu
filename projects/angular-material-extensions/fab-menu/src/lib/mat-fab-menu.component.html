@@ -1,0 +1,23 @@
+<div [fxLayout]="layout" fxLayoutGap="16px" fxLayoutAlign="center center" class="container">
+  <div fxLayoutAlign="center">
+    <button mat-fab
+            [ngClass]="{
+    'mat-fab' : !isActive,
+    'mat-mini-fab' : isActive
+  }" [color]="color"
+            [disabled]="disabled"
+            (click)="isActive = !isActive">
+      <mat-icon [@fabToggler]="{value: isActive}">{{icon}}</mat-icon> <!-- Animation here -->
+    </button>
+  </div>
+  <div *ngIf="isActive" [@fabsStagger]="fabButtons.length"
+       [fxLayout]="layout2" fxLayoutGap="16px" fxLayoutAlign="center center">
+    <button *ngFor="let fab of fabButtons"
+            mat-fab
+            [color]="fab?.color"
+            (click)="onFabMenuItemSelected.emit(fab.id)">
+      <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">{{fab?.icon}}</mat-icon>
+      <img *ngIf="fab?.imgUrl" class="mat-icon" [src]="fab?.imgUrl" alt="icon">
+    </button>
+  </div>
+</div>
