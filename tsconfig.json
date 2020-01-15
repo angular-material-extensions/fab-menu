@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@angular-material-extensions/fab-menu": [
+        "dist/angular-material-extensions/fab-menu"
+      ],
+      "@angular-material-extensions/fab-menu/*": [
+        "dist/angular-material-extensions/fab-menu/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
