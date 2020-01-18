@@ -54,11 +54,9 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('onChanges', changes);
     if (changes.direction && !changes.direction.firstChange) {
       this.direction = changes.direction.currentValue;
       this.adjustLayout();
-      console.log('changed the direction to', changes.direction.currentValue, this.direction);
     }
 
     if (changes.color && !changes.color.firstChange) {
