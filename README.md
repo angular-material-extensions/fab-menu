@@ -20,12 +20,12 @@
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v0.2.0/fab-menu.gif">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/ex1.gif">
 </p>
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v0.2.0/fab-menu.png">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/ex2.png">
 </p>
 
 ## Built by and for developers :heart:
@@ -97,32 +97,21 @@ Once installed you need to import the main module:
 ```js
 import { MatFabMenuModule } from '@angular-material-extensions/fab-menu';
 ```
-The only remaining part is to list the imported module in your application module. The exact method will be slightly
-different for the root (top-level) module for which you should end up with the code similar to (notice ` MatFabMenuModule.forRoot()`):
-```js
+
+```typescript
 import { MatFabMenuModule } from '@angular-material-extensions/fab-menu';
 
 @NgModule({
   declarations: [AppComponent, ...],
-  imports: [MatFabMenuModule.forRoot(), ...],  
+  imports: [MatFabMenuModule, ...],  
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
 ```
 
-Other modules in your application can simply import ` MatFabMenuModule `:
+Other modules in your application like for lazy loading import ` MatSelectCountryModule ` into your feature module:
 
-```js
-import { MatFabMenuModule } from '@angular-material-extensions/fab-menu';
-
-@NgModule({
-  declarations: [OtherComponent, ...],
-  imports: [MatFabMenuModule, ...], 
-})
-export class OtherModule {
-}
-```
 
 <a name="api"/>
 
@@ -132,49 +121,135 @@ export class OtherModule {
 
 | option | bind  |  type  |   default    | description  |
 |:-------------------|:--------:|:------:|:------------:|:-------------------------------------------------------------------------------------------------|    
-| appearance      | `Input()`  | `MatFormFieldAppearance`    | - |  Possible appearance styles for `mat-form-field` | 'legacy' | 'standard' | 'fill' | 'outline'
-| disabled      | `Input()`  | `boolean`    | - |  Whether the component is disabled
-| disabled      | `Input()`  | `boolean`    | - |  Whether the component is read only
-| onCountrySelected  | `Output()` | `EventEmitter<Country>`    | - | emits the selected country as object (see the interface below)
+| fabButtons      | `Input()`  | `MatFabMenu[]`    | - |  array of floating actions button as menu to render
+| icon      | `Input()`  | `string`    | `add` |  material icon string e.g: home, mail, phone [see more](https://material.io/resources/icons/?style=baseline)
+| direction      | `Input()`  | `MatFabMenuDirection`    | `top` |  the direction of buttons: `'top' | 'bottom' | 'left' | 'right';`
+| color      | `Input()`  | `ThemePalette`    | `accent` |  the color of the main fab: primary, accent or warn
+| isActive      | `Input()`  | `boolean`    | `falase` |  Whether the component is active
+| disabled      | `Input()`  | `boolean`    | `false` |  Whether the component is disabled
+| onFabMenuItemSelected  | `Output()` | `EventEmitter<string | number>`    | - | emits the selected button by id
 
+
+Important interfaces or type
 
 ```typescript
-interface Country {
-  name: string;
-  alpha2Code: string;
-  alpha3Code: string;
-  numericCode: string;
+type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
+
+interface MatFabMenu {
+  id: number;
+  icon?: string; // please use either icon or imgUrl
+  imgUrl?: string; // please use either icon or imgUrl
+  tooltip?: string; // coming soon
+  color?: ThemePalette;
+  iconColor?: ThemePalette;
 }
 ```
 
 
 <a name="usage"/>
 
-## [Usage](https://angular-material-extensions.github.io/fab-menu/getting-started)
-
-add the `<mat-fab-menu>` element to your template:
+## [Usage](https://angular-material-extensions.github.io/fab-menu)
 
 ```html
-<mat-fab-menu>
+<mat-fab-menu color="primary" 
+              [fabButtons]="fabButtonsRandom">
+</mat-fab-menu>
+```
+
+```typescript
+import {MatFabMenu} from '@angular-material-extensions/fab-menu';
+
+fabButtonsRandom: MatFabMenu[] = [
+    {
+      id: 1,
+      icon: 'create'
+    },
+    {
+      id: 2,
+      icon: 'mail'
+    },
+    {
+      id: 3,
+      icon: 'file_copy'
+    },
+    {
+      id: 4,
+      icon: 'phone'
+    },
+  ];
+```
+
+try to use your own svg instead of material icons:
+
+```typescript
+import {MatFabMenu} from '@angular-material-extensions/fab-menu';
+
+fabCountries: MatFabMenu[] = [
+    {
+      id: 1,
+      imgUrl: 'assets/countrys-flags/svg/canada.svg'
+    },
+    {
+      id: 2,
+      imgUrl: 'assets/countrys-flags/svg/germany.svg'
+    },
+    {
+      id: 3,
+      imgUrl: 'assets/countrys-flags/svg/france.svg'
+    },
+    {
+      id: 4,
+      imgUrl: 'assets/countrys-flags/svg/lebanon.svg'
+    },
+  ];
+```
+
+```html
+<mat-fab-menu color="primary" 
+              [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
 ```
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v0.2.0/example_full.png">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/top.png">
 </p>
+
+```html
+<mat-fab-menu color="primary" 
+              direction="bottom"
+              [fabButtons]="fabButtonsRandom">
+</mat-fab-menu>
+```
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v0.2.0/example3.png">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/bottom.png">
 </p>
+
+```html
+<mat-fab-menu color="primary" 
+              direction="left"
+              [fabButtons]="fabButtonsRandom">
+</mat-fab-menu>
+```
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v0.2.0/example2.png">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/left.png">
 </p>
 
+```html
+<mat-fab-menu color="primary" 
+              direction="right"
+              [fabButtons]="fabButtonsRandom">
+</mat-fab-menu>
+```
 
+<p align="center">
+  <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/right.png">
+</p>
 <a name="run-demo-app-locally"/>
 
 ###  Run Demo App Locally
@@ -197,15 +272,13 @@ $ npm start
 ## Other Angular Libraries
 - [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
 - [ngx-linkifyjs](https://github.com/AnthonyNahas/ngx-linkifyjs)
-- [@firebaseui/ng-bootstrap](https://github.com/firebaseui/ng-bootstrap)
 - [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
 - [@angular-material-extensions/google-maps-autocomplete](https://github.com/angular-material-extensions/google-maps-autocomplete)
 - [@angular-material-extensions/link-preview](https://github.com/angular-material-extensions/link-preview)
 - [@angular-material-extensions/select-country](https://github.com/angular-material-extensions/select-country)
 - [@angular-material-extensions/pages](https://github.com/angular-material-extensions/pages)
+- [@angular-material-extensions/select-country](https://github.com/angular-material-extensions/select-country)
 - [@angular-material-extensions/contacts](https://github.com/angular-material-extensions/contacts)
-- [@angular-material-extensions/faq](https://github.com/angular-material-extensions/faq)
-- [@angular-material-extensions/combination-generator](https://github.com/angular-material-extensions/combination-generator)
 
 ---
 
