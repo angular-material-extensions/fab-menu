@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {speedDialFabAnimations} from './mat-fab-menu.animations';
 import {ThemePalette} from '@angular/material';
 
@@ -19,7 +19,7 @@ export type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
   styleUrls: ['mat-fab-menu.component.scss'],
   animations: speedDialFabAnimations
 })
-export class MatFabMenuComponent implements OnInit {
+export class MatFabMenuComponent implements OnInit, OnChanges {
 
   @Input()
   fabButtons: MatFabMenu[];
@@ -50,7 +50,27 @@ export class MatFabMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('direction', this.direction);
+    this.adjustLayout();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('onChanges', changes);
+    if (changes.direction && !changes.direction.firstChange) {
+      this.direction = changes.direction.currentValue;
+      this.adjustLayout();
+      console.log('changed the direction to', changes.direction.currentValue, this.direction);
+    }
+
+    if (changes.color && !changes.color.firstChange) {
+      this.color = changes.color.currentValue;
+    }
+
+    if (changes.fabButtons && !changes.fabButtons.firstChange) {
+      this.fabButtons = changes.fabButtons.currentValue;
+    }
+  }
+
+  adjustLayout() {
     switch (this.direction) {
       case 'top':
         this.layout = 'column-reverse';
