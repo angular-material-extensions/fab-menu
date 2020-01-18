@@ -25,7 +25,7 @@
 
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/ex2.png">
+   src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/ex2.gif">
 </p>
 
 ## Built by and for developers :heart:
