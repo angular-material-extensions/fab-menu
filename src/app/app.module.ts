@@ -8,6 +8,8 @@ import {MarkdownModule} from 'ngx-markdown';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
+import {MatCardModule, MatRadioModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,13 @@ import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     FlexLayoutModule,
     Angulartics2Module.forRoot(),
     MarkdownModule.forRoot(),
-    MatFabMenuModule
+    MatFabMenuModule,
+    MatCardModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
