@@ -437,26 +437,53 @@
   <mat-card class="card-container-example">
     <mat-card-content>
       <p>
+        Color:
+        <mat-radio-group aria-label="Select an example option"
+                         [(ngModel)]="color">
+          <mat-radio-button value="primary">Primary</mat-radio-button>
+          <mat-radio-button value="accent">Accent</mat-radio-button>
+          <mat-radio-button value="warn">Warn</mat-radio-button>
+        </mat-radio-group>
+      </p>
+      <p>
         Pick an example:
-        <mat-radio-group aria-label="Select an example option">
-          <mat-radio-button value="1">Professions</mat-radio-button>
-          <mat-radio-button value="2">Countries</mat-radio-button>
+        <mat-radio-group aria-label="Select an example option"
+                         [(ngModel)]="exampleIndex"
+                         (ngModelChange)="onExampleChanged($event)">
+          <mat-radio-button [value]="1">Professions</mat-radio-button>
+          <mat-radio-button [value]="2">Countries</mat-radio-button>
+          <mat-radio-button [value]="3">Numbers</mat-radio-button>
+          <mat-radio-button [value]="4">Randmon</mat-radio-button>
         </mat-radio-group>
       </p>
 
       <p>
         Direction
-        <mat-radio-group aria-label="Select a direction" [(ngModel)]="direction" (ngModelChange)="logDirection($event)">
+        <mat-radio-group aria-label="Select a direction"
+                         [(ngModel)]="direction"
+                         (ngModelChange)="logDirection()">
           <mat-radio-button value="top">Top</mat-radio-button>
           <mat-radio-button value="bottom">Bottom</mat-radio-button>
           <mat-radio-button value="left">Left</mat-radio-button>
           <mat-radio-button value="right">Right</mat-radio-button>
         </mat-radio-group>
       </p>
-      <div fxLayout="row" fxLayoutAlign="end end">
-        <mat-fab-menu color="primary"
+      <p>
+        <mat-slide-toggle #isActive>isActive</mat-slide-toggle>
+      </p>
+      <p>
+        <mat-slide-toggle #disabled>disabled</mat-slide-toggle>
+      </p>
+      <div fxLayout="column"
+           [fxLayoutAlign]="layout"
+           [ngStyle.xs]="{'height':'60%'}"
+           [ngStyle.sm]="{'height':'70%'}"
+           style="height: 80%">
+        <mat-fab-menu [color]="color"
                       [direction]="direction"
-                      [fabButtons]="fabProfessions">
+                      [fabButtons]="exampleFabButtons"
+                      [isActive]="isActive.checked"
+                      [disabled]="disabled.checked">
         </mat-fab-menu>
       </div>
     </mat-card-content>
@@ -465,18 +492,8 @@
   <!--    <mat-fab-menu color="primary" [fabButtons]="fabButtons" direction="top"></mat-fab-menu>-->
   <mat-fab-menu class="fix-bottom-right" color="primary" [fabButtons]="fabCountries" direction="top"></mat-fab-menu>
 
-  <!--  <div>Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-  <!--  <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-  <!--  <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
 
-  <!--  <div fxLayoutAlign="center">-->
-  <!--    <mat-fab-menu appearance="outline"-->
-  <!--                        label="Country"-->
-  <!--                        (onCountrySelected)="onCountrySelected($event)">-->
-  <!--    </mat-fab-menu>-->
-  <!--  </div>-->
-
-  <!--  <markdown src="assets/md/e1.md"></markdown>-->
+    <markdown src="assets/md/html.md"></markdown>
 
   <p>For more info, please read the official readme - see the links above GITHUB - DOCS - NPM</p>
 
@@ -619,6 +636,10 @@
       </svg>
     </a>
   </div>
+
+    <div>Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
   <!-- Footer -->
   <footer>

@@ -8,7 +8,7 @@ import {MarkdownModule} from 'ngx-markdown';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
-import {MatCardModule, MatRadioModule} from '@angular/material';
+import {MatCardModule, MatRadioModule, MatSlideToggleModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -25,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     MarkdownModule.forRoot(),
     MatFabMenuModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
