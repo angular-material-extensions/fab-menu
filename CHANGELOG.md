@@ -1,0 +1,27 @@
+# 0.1.0 (2020-01-18)
+
+
+### Bug Fixes
+
+* **demo:** improved the demo app ([0c236ce](https://github.com/angular-material-extensions/fab-menu/commit/0c236cebda5ca14b2d3a47b8c72362561bcbb9a8))
+* **demo:** update the demo app - configuration added ([ef3dac3](https://github.com/angular-material-extensions/fab-menu/commit/ef3dac3de3373bde41c5ce13c3b2124f8160ba9d))
+* **lib:** added prerender support ([a984ccb](https://github.com/angular-material-extensions/fab-menu/commit/a984ccb15dfdb9f85dc125288e423ba7486a4fff))
+* **lib:** added required packages ([a7cd0b6](https://github.com/angular-material-extensions/fab-menu/commit/a7cd0b65078f9bfe016401d6e98f4fa57aacee63))
+* **lib:** improved the library ([aca1a87](https://github.com/angular-material-extensions/fab-menu/commit/aca1a879aed2d0cede5dc099592e99ec7ea264ce))
+* **lib:** improved the mat fab menu component ([aa9d12e](https://github.com/angular-material-extensions/fab-menu/commit/aa9d12e02a2721002c679d3f54259c8dd9f1e7f5))
+* **lib:** removed logs ([b1a009e](https://github.com/angular-material-extensions/fab-menu/commit/b1a009e8081526c1a89f3cdbbdf70a96e5668408))
+* **lib:** update properties on changes ([e71dc1c](https://github.com/angular-material-extensions/fab-menu/commit/e71dc1cb1ac698e02f2b31de934cbe50c3801c33))
+* **lib:** updated the package.json file ([a81cc2e](https://github.com/angular-material-extensions/fab-menu/commit/a81cc2eb076c9b0264eac10233682c3b538d0cc6))
+* **project:** added modules imports in the demo app ([6a3cc1c](https://github.com/angular-material-extensions/fab-menu/commit/6a3cc1c465c44630b26a3a00b1a791f7162afe24))
+* **project:** updated the demo app ([769a6df](https://github.com/angular-material-extensions/fab-menu/commit/769a6df04452555de8eb26f546e11bcb2fa49925))
+
+
+### Features
+
+* **demo:** added svg to the project for example purposes ([2c2fded](https://github.com/angular-material-extensions/fab-menu/commit/2c2fded65394724933eb10a5db40453c8bd9594f))
+* **lib:** added ngx-markdown support ([22b6723](https://github.com/angular-material-extensions/fab-menu/commit/22b6723396be5c44633373f994e69c67a9cf7207))
+* **lib:** added schematics support ([f59869c](https://github.com/angular-material-extensions/fab-menu/commit/f59869cfb5b3187ed9c92a5927b80fcbff7125c3))
+* **lib:** generated the library ([9730f6c](https://github.com/angular-material-extensions/fab-menu/commit/9730f6c8ca1026ae22737cb25970638806a7eb9b))
+* **project:** added angular material to the project ([88b061c](https://github.com/angular-material-extensions/fab-menu/commit/88b061cba72dc360cc3881c49952ffc9e98f41d5))
+* **project:** support of prerendering ([a004bec](https://github.com/angular-material-extensions/fab-menu/commit/a004bec5a02037ad996c16644ff5be9a65387340))
+
