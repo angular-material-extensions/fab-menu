@@ -15,9 +15,10 @@
     <button (click)="onFabMenuItemSelected.emit(fab.id)"
             *ngFor="let fab of fabButtons"
             [color]="fab?.color"
+            [ngClass]="{'fullSVG' : fab?.imgUrl}"
             mat-fab>
       <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">{{fab?.icon}}</mat-icon>
-      <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon" class="mat-icon">
+      <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon">
     </button>
   </div>
 </div>

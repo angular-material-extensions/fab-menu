@@ -57,6 +57,11 @@ export class MatFabMenuComponent implements OnInit {
         this.layout2 = 'column-reverse';
         break;
 
+      case 'bottom':
+        this.layout = 'column';
+        this.layout2 = 'column';
+        break;
+
       case 'left':
         this.layout = 'row-reverse';
         this.layout2 = 'row-reverse';
