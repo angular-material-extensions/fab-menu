@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/angular-material-extensions/fab-menu/compare/1.0.0...1.1.0) (2020-01-20)
+
+
+### Bug Fixes
+
+* **lib:** minor update for ssr ([9044df9](https://github.com/angular-material-extensions/fab-menu/commit/9044df9b89825fb104efc07a5758edb416c92914))
+* **lib:** support string for mat fab menu id ([f26b926](https://github.com/angular-material-extensions/fab-menu/commit/f26b926b25e68f1e7ff7cfff1679572dc4612e62))
+
+
+### Features
+
+* **project:** added angular-cli-ghpages to the project ([5d38424](https://github.com/angular-material-extensions/fab-menu/commit/5d3842448aa76e08ab83b041c9d2b30b64bb7f3b))
+
 # [1.0.0](https://github.com/angular-material-extensions/fab-menu/compare/0.1.0...1.0.0) (2020-01-20)
 
 
