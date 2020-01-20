@@ -1,3 +1,11 @@
+# [1.0.0](https://github.com/angular-material-extensions/fab-menu/compare/0.1.0...1.0.0) (2020-01-20)
+
+
+### Bug Fixes
+
+* **lib:** minor update ([edc118f](https://github.com/angular-material-extensions/fab-menu/commit/edc118f0f79ede496d0613f80f23db90d6886aff))
+* **lib:** solved issues with schematics ([8b290e3](https://github.com/angular-material-extensions/fab-menu/commit/8b290e3537b1d4c7ec1e105c84e7bdabf44d07da))
+
 # 0.1.0 (2020-01-18)
 
 
