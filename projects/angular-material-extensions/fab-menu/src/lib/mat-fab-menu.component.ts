@@ -3,7 +3,7 @@ import {speedDialFabAnimations} from './mat-fab-menu.animations';
 import {ThemePalette} from '@angular/material';
 
 export interface MatFabMenu {
-  id: number;
+  id: string | number;
   icon?: string; // please use either icon or imgUrl
   imgUrl?: string; // please use either icon or imgUrl
   tooltip?: string;
