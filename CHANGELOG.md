@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/angular-material-extensions/fab-menu/compare/1.1.0...1.2.0) (2020-01-20)
+
+
+### Features
+
+* **lib:** support of tooltip position ([3874d8a](https://github.com/angular-material-extensions/fab-menu/commit/3874d8ae4553a0c2b0e9cf9d0cc6bd6472fb76ca))
+
 # [1.1.0](https://github.com/angular-material-extensions/fab-menu/compare/1.0.0...1.1.0) (2020-01-20)
 
 
