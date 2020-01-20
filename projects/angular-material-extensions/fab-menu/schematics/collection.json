@@ -2,7 +2,7 @@
   "$schema": "../../../../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "ng-add": {
-      "description": "Add @angular-material-extensions/select-country to the project.",
+      "description": "Add @angular-material-extensions/fab-menu to the project.",
       "factory": "./ng-add/index"
     }
   }

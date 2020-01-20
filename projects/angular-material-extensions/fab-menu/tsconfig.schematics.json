@@ -15,7 +15,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "rootDir": "schematics",
-    "outDir": "../../../dist/angular-material-extensions/select-country/schematics",
+    "outDir": "../../../dist/angular-material-extensions/fab-menu/schematics",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
