@@ -58,19 +58,27 @@ export class AppComponent implements OnInit {
   fabCountries: MatFabMenu[] = [
     {
       id: 1,
-      imgUrl: 'assets/countrys-flags/svg/canada.svg'
+      imgUrl: 'assets/countrys-flags/svg/canada.svg',
+      tooltip: 'canada',
+      tooltipPosition: 'before'
     },
     {
       id: 2,
-      imgUrl: 'assets/countrys-flags/svg/germany.svg'
+      imgUrl: 'assets/countrys-flags/svg/germany.svg',
+      tooltip: 'germany',
+      tooltipPosition: 'before'
     },
     {
       id: 3,
-      imgUrl: 'assets/countrys-flags/svg/france.svg'
+      imgUrl: 'assets/countrys-flags/svg/france.svg',
+      tooltip: 'france',
+      tooltipPosition: 'before'
     },
     {
       id: 4,
-      imgUrl: 'assets/countrys-flags/svg/lebanon.svg'
+      imgUrl: 'assets/countrys-flags/svg/lebanon.svg',
+      tooltip: 'lebanon',
+      tooltipPosition: 'before'
     },
   ];
 

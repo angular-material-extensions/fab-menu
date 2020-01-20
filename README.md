@@ -133,16 +133,20 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 Important interfaces or type
 
 ```typescript
-type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
+
+import {ThemePalette, TooltipPosition} from '@angular/material';
 
 interface MatFabMenu {
-  id: number;
+  id: string | number;
   icon?: string; // please use either icon or imgUrl
-  imgUrl?: string; // please use either icon or imgUrl
-  tooltip?: string; // coming soon
-  color?: ThemePalette;
   iconColor?: ThemePalette;
+  imgUrl?: string; // please use either icon or imgUrl
+  tooltip?: string;
+  tooltipPosition?: TooltipPosition;
+  color?: ThemePalette;
 }
+
+type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
 ```
 
 

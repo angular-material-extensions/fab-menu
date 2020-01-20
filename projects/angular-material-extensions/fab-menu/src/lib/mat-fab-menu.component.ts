@@ -1,14 +1,15 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {speedDialFabAnimations} from './mat-fab-menu.animations';
-import {ThemePalette} from '@angular/material';
+import {ThemePalette, TooltipPosition} from '@angular/material';
 
 export interface MatFabMenu {
   id: string | number;
   icon?: string; // please use either icon or imgUrl
+  iconColor?: ThemePalette;
   imgUrl?: string; // please use either icon or imgUrl
   tooltip?: string;
+  tooltipPosition?: TooltipPosition;
   color?: ThemePalette;
-  iconColor?: ThemePalette;
 }
 
 export type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
