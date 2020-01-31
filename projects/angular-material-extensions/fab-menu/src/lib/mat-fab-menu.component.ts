@@ -92,4 +92,8 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
         break;
     }
   }
+
+  toggle() {
+    this.isActive = !this.isActive;
+  }
 }

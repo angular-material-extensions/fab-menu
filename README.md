@@ -129,6 +129,13 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 | disabled      | `Input()`  | `boolean`    | `false` |  Whether the component is disabled
 | onFabMenuItemSelected  | `Output()` | `EventEmitter<string | number>`    | - | emits the selected button by id
 
+### Methods
+
+```typescript
+@ViewChild('matFabMenu', { static: false }) matFabMenu: MatFabMenu;
+```
+
+`toggle()` will toggle the `isActive` property
 
 Important interfaces or type
 
