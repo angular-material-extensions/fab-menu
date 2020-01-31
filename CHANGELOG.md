@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/angular-material-extensions/fab-menu/compare/1.2.0...1.3.0) (2020-01-31)
+
+
+### Bug Fixes
+
+* **project:** updated the dependencies ([7bfaad0](https://github.com/angular-material-extensions/fab-menu/commit/7bfaad0c588afb036d40d32697c4f504c3c40b0d))
+
+
+### Features
+
+* **lib:** added toggle method ([6341fcd](https://github.com/angular-material-extensions/fab-menu/commit/6341fcd4ebeb8f7bcbb7c185d0c5eb87ddef6595))
+
 # [1.2.0](https://github.com/angular-material-extensions/fab-menu/compare/1.1.0...1.2.0) (2020-01-20)
 
 
