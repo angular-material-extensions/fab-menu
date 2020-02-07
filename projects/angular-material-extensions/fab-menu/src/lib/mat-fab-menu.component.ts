@@ -40,6 +40,9 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
   @Input()
   disabled: boolean;
 
+  @Input()
+  closeAfterSelection = true;
+
   // tslint:disable-next-line:no-output-on-prefix
   @Output()
   onFabMenuItemSelected: EventEmitter<string | number> = new EventEmitter<string | number>();
@@ -95,5 +98,12 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
 
   toggle() {
     this.isActive = !this.isActive;
+  }
+
+  selectFabMenu(fab: MatFabMenu) {
+    this.onFabMenuItemSelected.emit(fab.id);
+    if (this.closeAfterSelection) {
+      this.isActive = false;
+    }
   }
 }
