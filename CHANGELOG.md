@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/angular-material-extensions/fab-menu/compare/1.3.0...1.4.0) (2020-02-07)
+
+
+### Bug Fixes
+
+* **project:** updated the dependencies ([2220504](https://github.com/angular-material-extensions/fab-menu/commit/2220504c288ea6a9da2fcbc26cae197645536a00))
+
+
+### Features
+
+* **lib:** close the fab menu when item is selected ([a8482f8](https://github.com/angular-material-extensions/fab-menu/commit/a8482f888e988d386a4c1f28e719b6fbc71e3713))
+
 # [1.3.0](https://github.com/angular-material-extensions/fab-menu/compare/1.2.0...1.3.0) (2020-01-31)
 
 
