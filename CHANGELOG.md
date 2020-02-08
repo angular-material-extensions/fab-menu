@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/angular-material-extensions/fab-menu/compare/1.4.0...2.0.0) (2020-02-08)
+
+
+### Bug Fixes
+
+* **lib:** updated the README.md file ([8556453](https://github.com/angular-material-extensions/fab-menu/commit/855645383501c699a64dbafc4435beefd77b22a8))
+* **lib:** upgraded the lib to angular v9 ([3780222](https://github.com/angular-material-extensions/fab-menu/commit/3780222dff49cfcaa31e97be38deac452282add8))
+* **lib:** upgraded the lib to angular v9 + fixed schematics issues ([766e073](https://github.com/angular-material-extensions/fab-menu/commit/766e0735da18b57e215af141058c53c465ee0f40))
+
 # [1.4.0](https://github.com/angular-material-extensions/fab-menu/compare/1.3.0...1.4.0) (2020-02-07)
 
 
