@@ -4,7 +4,7 @@
    src="https://cdn.jsdelivr.net/gh/angular-material-extensions/fab-menu@master/assets/angular-material-extensions-logo.svg">
 </p>
 
-# @angular-material-extensions/fab-menu - Angular Material component that allow users to select a country or nationality with an autocomplete feature - Angular V8 supported incl. schematics
+# @angular-material-extensions/fab-menu - Angular Material component that allow users to select a country or nationality with an autocomplete feature - Angular V9 supported incl. schematics
 
 [![npm version](https://badge.fury.io/js/%40angular-material-extensions%2Ffab-menu.svg)](https://badge.fury.io/js/%40angular-material-extensions%2Ffab-menu)
 [![npm demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://angular-material-extensions.github.io/fab-menu)
@@ -268,6 +268,8 @@ fabCountries: MatFabMenu[] = [
 
 
 Build the library
+
+after installing the dependencies with `npm i`
 
 ```bash
 $ npm run build:lib
