@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatFabMenu, MatFabMenuDirection} from '@angular-material-extensions/fab-menu';
-import {ThemePalette} from '@angular/material';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-root',

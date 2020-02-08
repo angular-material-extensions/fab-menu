@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -50,7 +50,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -133,7 +132,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -145,16 +144,39 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true
             }
           }
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {}
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "fab-menu:build",
+            "serverTarget": "fab-menu:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fab-menu:build:production",
+              "serverTarget": "fab-menu:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "fab-menu:build:production",
+            "serverTarget": "fab-menu:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          }
         }
       }
     },
@@ -169,6 +191,11 @@
           "options": {
             "tsConfig": "projects/angular-material-extensions/fab-menu/tsconfig.lib.json",
             "project": "projects/angular-material-extensions/fab-menu/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-material-extensions/fab-menu/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -194,5 +221,8 @@
       }
     }
   },
-  "defaultProject": "fab-menu"
+  "defaultProject": "fab-menu",
+  "cli": {
+    "analytics": "99687168-ab12-48d5-a2c4-35f8907842aa"
+  }
 }

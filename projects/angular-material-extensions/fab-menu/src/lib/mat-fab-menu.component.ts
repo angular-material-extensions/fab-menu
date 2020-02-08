@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {speedDialFabAnimations} from './mat-fab-menu.animations';
-import {ThemePalette, TooltipPosition} from '@angular/material';
+import { ThemePalette } from '@angular/material/core';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 export interface MatFabMenu {
   id: string | number;

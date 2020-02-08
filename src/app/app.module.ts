@@ -8,7 +8,9 @@ import {MarkdownModule} from 'ngx-markdown';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
-import {MatCardModule, MatRadioModule, MatSlideToggleModule} from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
