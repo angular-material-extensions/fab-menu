@@ -29,7 +29,7 @@
     "url": "https://github.com/angular-material-extensions/fab-menu/issues"
   },
   "scripts": {
-    "build": "../../../node_modules/.bin/ng build @angular-material-extensions/fab-menu",
+    "build": "../../../node_modules/.bin/ng build @angular-material-extensions/fab-menu --prod",
     "build:watch": "../../../node_modules/.bin/ng build @angular-material-extensions/fab-menu --watch",
     "build:schematics": "../../../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "clean": "rm -rf ../../../dist",
