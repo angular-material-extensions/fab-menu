@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/angular-material-extensions/fab-menu/compare/2.0.0...2.0.1) (2020-02-17)
+
+
+### Bug Fixes
+
+* **lib:** bump version ([c0ce29c](https://github.com/angular-material-extensions/fab-menu/commit/c0ce29cc577643c1f17793441b2431d857904a1a))
+* **lib:** minor - prevent double event emits on menu item clicked ([8d2a712](https://github.com/angular-material-extensions/fab-menu/commit/8d2a71208bb0ddf54fb91f2c945e416706ae61ec))
+* **lib:** updated angular to v9.0.1 ([9f4d406](https://github.com/angular-material-extensions/fab-menu/commit/9f4d406bb34d01c2adae12418e24751aa193346a))
+
 # [2.0.0](https://github.com/angular-material-extensions/fab-menu/compare/1.4.0...2.0.0) (2020-02-08)
 
 
