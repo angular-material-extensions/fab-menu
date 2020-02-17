@@ -12,7 +12,7 @@
   </div>
   <div *ngIf="isActive" [@fabsStagger]="fabButtons.length"
        [fxLayout]="layout2" fxLayoutAlign="center center" fxLayoutGap="16px">
-    <button (click)="selectFabMenu(fab); onFabMenuItemSelected.emit(fab.id)"
+    <button (click)="selectFabMenu(fab)"
             *ngFor="let fab of fabButtons"
             [color]="fab?.color"
             [matTooltip]="fab?.tooltip"
