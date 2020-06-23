@@ -1,6 +1,6 @@
 <p align="center">
   <img alt="angular-material-extensions's logo"
-   height="256px" width="256px" style="text-align: center;" 
+   height="256px" width="256px" style="text-align: center;"
    src="https://cdn.jsdelivr.net/gh/angular-material-extensions/fab-menu@master/assets/angular-material-extensions-logo.svg">
 </p>
 
@@ -32,7 +32,7 @@
 Do you have any question or suggestion ? Please do not hesitate to contact us!
 Alternatively, provide a PR | open an appropriate issue [here](https://github.com/angular-material-extensions/fab-menu/issues)
 
-If you like this project, support [angular-material-extensions](https://github.com/angular-material-extensions) 
+If you like this project, support [angular-material-extensions](https://github.com/angular-material-extensions)
 by starring :star: and sharing it :loudspeaker:
 
 ## Table of Contents
@@ -81,7 +81,7 @@ Now add the library via the `angular schematics`
 ng add @angular-material-extensions/fab-menu
 ```
 
-## 2. Install via *npm*. (Alternative) 
+## 2. Install via *npm*. (Alternative)
 
 Now install `@angular-material-extensions/fab-menu` via:
 ```shell
@@ -128,7 +128,7 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 | isActive      | `Input()`  | `boolean`    | `falase` |  Whether the component is active
 | disabled      | `Input()`  | `boolean`    | `false` |  Whether the component is disabled
 | closeAfterSelection      | `Input()`  | `boolean`    | `true` | Close after selecting a fab menu item
-| onFabMenuItemSelected  | `Output()` | `EventEmitter<string | number>`    | - | emits the selected button by id
+| onFabMenuItemSelected  | `Output()` | `EventEmitter<string \| number>`    | - | emits the selected button by id
 
 ### Methods
 
@@ -163,7 +163,7 @@ type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
 ## [Usage](https://angular-material-extensions.github.io/fab-menu)
 
 ```html
-<mat-fab-menu color="primary" 
+<mat-fab-menu color="primary"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
 ```
@@ -217,7 +217,7 @@ fabCountries: MatFabMenu[] = [
 ```
 
 ```html
-<mat-fab-menu color="primary" 
+<mat-fab-menu color="primary"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
 ```
@@ -228,7 +228,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary" 
+<mat-fab-menu color="primary"
               direction="bottom"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
@@ -240,7 +240,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary" 
+<mat-fab-menu color="primary"
               direction="left"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
@@ -252,7 +252,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary" 
+<mat-fab-menu color="primary"
               direction="right"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
@@ -302,7 +302,7 @@ $ npm start
 + Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
 + or open an appropriate [issue](https://github.com/angular-material-extensions/fab-menu/issues)
 + let us chat on [Gitter](https://gitter.im/angular-material-extensions/Lobby)
- 
+
  Built by and for developers :heart: we will help you :punch:
 
 ---
@@ -318,4 +318,3 @@ This project is supported by [jetbrains](https://www.jetbrains.com/) with 1 ALL 
 ## License
 
 Copyright (c) 2019 [Anthony Nahas](https://github.com/AnthonyNahas). Licensed under the MIT License (MIT)
-
