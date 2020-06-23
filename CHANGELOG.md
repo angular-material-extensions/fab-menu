@@ -1,3 +1,7 @@
+* Updating CHANGELOG.md for v2.0.2 (81d0f1d)
+* fix(lib): updated deps (49198dc)
+* fix(lib): updated deps (b425035)
+
 * fix(lib): updated deps (49198dc)
 * fix(lib): updated deps (b425035)
 
