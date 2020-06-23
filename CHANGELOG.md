@@ -1,3 +1,6 @@
+* fix(lib): updated deps (49198dc)
+* fix(lib): updated deps (b425035)
+
 ## [2.0.1](https://github.com/angular-material-extensions/fab-menu/compare/2.0.0...2.0.1) (2020-02-17)
 
 
