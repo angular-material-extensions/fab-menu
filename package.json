@@ -26,7 +26,8 @@
     "dev:ssr": "ng run fab-menu:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run fab-menu:server:production",
-    "prerender": "ng run fab-menu:prerender"
+    "prerender": "ng run fab-menu:prerender",
+    "prerender:ghpages": "ng run fab-menu:prerender_ghpages"
   },
   "private": true,
   "dependencies": {
