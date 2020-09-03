@@ -1,14 +1,301 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
   <title>FabMenu</title>
-  <base href="/fab-menu/">  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <base href="/">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="favicon.ico" rel="icon" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="/fab-menu/styles.faf42ce1232aa82f4137.css"></head>
+<link rel="stylesheet" href="styles.236791aeccfa6de12d3a.css"><style ng-transition="serverApp">mat-fab-menu.fix-bottom-right[_ngcontent-sc135]{position:fixed;bottom:15px;right:15px;z-index:100}.card-container-example[_ngcontent-sc135]{height:550px;width:70%}mat-card-content[_ngcontent-sc135]{height:100%}mat-card-content[_ngcontent-sc135]   mat-fab-menu[_ngcontent-sc135]{margin-bottom:16px}mat-card-content[_ngcontent-sc135]   .mat-radio-button[_ngcontent-sc135] ~ .mat-radio-button[_ngcontent-sc135]{margin-left:16px}mat-card-content[_ngcontent-sc135]   p[_ngcontent-sc135]{margin:8px}markdown[_ngcontent-sc135]{max-width:100%;margin:4px}</style><style ng-transition="serverApp">[_nghost-sc135] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1[_ngcontent-sc135], h2[_ngcontent-sc135], h3[_ngcontent-sc135], h4[_ngcontent-sc135], h5[_ngcontent-sc135], h6[_ngcontent-sc135] {
+    margin: 8px 0;
+  }
+
+  p[_ngcontent-sc135] {
+    margin: 0;
+  }
+
+  .spacer[_ngcontent-sc135] {
+    flex: 1;
+  }
+
+  .toolbar[_ngcontent-sc135] {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar[_ngcontent-sc135]   img[_ngcontent-sc135] {
+    margin: 0 16px;
+  }
+
+  .toolbar[_ngcontent-sc135]   #twitter-logo[_ngcontent-sc135] {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar[_ngcontent-sc135]   #twitter-logo[_ngcontent-sc135]:hover {
+    opacity: 0.8;
+  }
+
+  .content[_ngcontent-sc135] {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons[_ngcontent-sc135] {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons[_ngcontent-sc135]:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card[_ngcontent-sc135]   svg.material-icons[_ngcontent-sc135]   path[_ngcontent-sc135] {
+    fill: #888;
+  }
+
+  .card-container[_ngcontent-sc135] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card[_ngcontent-sc135] {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container[_ngcontent-sc135]   .card[_ngcontent-sc135]:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small[_ngcontent-sc135] {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container[_ngcontent-sc135]   .card[_ngcontent-sc135]:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container[_ngcontent-sc135]   .card[_ngcontent-sc135]:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+  }
+
+  .card-container[_ngcontent-sc135]   .card[_ngcontent-sc135]:not(.highlight-card):hover   .material-icons[_ngcontent-sc135]   path[_ngcontent-sc135] {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card[_ngcontent-sc135] {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card[_ngcontent-sc135]   span[_ngcontent-sc135] {
+    margin-left: 60px;
+  }
+
+  svg#rocket[_ngcontent-sc135] {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke[_ngcontent-sc135] {
+    height: 100vh;
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a[_ngcontent-sc135], a[_ngcontent-sc135]:visited, a[_ngcontent-sc135]:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a[_ngcontent-sc135]:hover {
+    color: #125699;
+  }
+
+  .terminal[_ngcontent-sc135] {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal[_ngcontent-sc135]::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal[_ngcontent-sc135]   pre[_ngcontent-sc135] {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .circle-link[_ngcontent-sc135] {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link[_ngcontent-sc135]:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer[_ngcontent-sc135] {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer[_ngcontent-sc135]   a[_ngcontent-sc135] {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge[_ngcontent-sc135] {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  }
+
+  .github-star-badge[_ngcontent-sc135]:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge[_ngcontent-sc135]   .material-icons[_ngcontent-sc135] {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds[_ngcontent-sc135] {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  
+  @media screen and (max-width: 767px) {
+
+    .card-container[_ngcontent-sc135]    > *[_ngcontent-sc135]:not(.circle-link), .terminal[_ngcontent-sc135] {
+      width: 100%;
+    }
+
+    .card[_ngcontent-sc135]:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card[_ngcontent-sc135]   span[_ngcontent-sc135] {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke[_ngcontent-sc135] {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke[_ngcontent-sc135] {
+      display: none;
+      visibility: hidden;
+    }
+  }</style><style ng-transition="serverApp">.mat-card{transition:box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);display:block;position:relative;padding:16px;border-radius:4px}._mat-animation-noopable.mat-card{transition:none;animation:none}.mat-card .mat-divider-horizontal{position:absolute;left:0;width:100%}[dir=rtl] .mat-card .mat-divider-horizontal{left:auto;right:0}.mat-card .mat-divider-horizontal.mat-divider-inset{position:static;margin:0}[dir=rtl] .mat-card .mat-divider-horizontal.mat-divider-inset{margin-right:0}.cdk-high-contrast-active .mat-card{outline:solid 1px}.mat-card-actions,.mat-card-subtitle,.mat-card-content{display:block;margin-bottom:16px}.mat-card-title{display:block;margin-bottom:8px}.mat-card-actions{margin-left:-8px;margin-right:-8px;padding:8px 0}.mat-card-actions-align-end{display:flex;justify-content:flex-end}.mat-card-image{width:calc(100% + 32px);margin:0 -16px 16px -16px}.mat-card-footer{display:block;margin:0 -16px -16px -16px}.mat-card-actions .mat-button,.mat-card-actions .mat-raised-button,.mat-card-actions .mat-stroked-button{margin:0 8px}.mat-card-header{display:flex;flex-direction:row}.mat-card-header .mat-card-title{margin-bottom:12px}.mat-card-header-text{margin:0 16px}.mat-card-avatar{height:40px;width:40px;border-radius:50%;flex-shrink:0;object-fit:cover}.mat-card-title-group{display:flex;justify-content:space-between}.mat-card-sm-image{width:80px;height:80px}.mat-card-md-image{width:112px;height:112px}.mat-card-lg-image{width:152px;height:152px}.mat-card-xl-image{width:240px;height:240px;margin:-8px}.mat-card-title-group>.mat-card-xl-image{margin:-8px 0 8px}@media(max-width: 599px){.mat-card-title-group{margin:0}.mat-card-xl-image{margin-left:0;margin-right:0}}.mat-card>:first-child,.mat-card-content>:first-child{margin-top:0}.mat-card>:last-child:not(.mat-card-footer),.mat-card-content>:last-child:not(.mat-card-footer){margin-bottom:0}.mat-card-image:first-child{margin-top:-16px;border-top-left-radius:inherit;border-top-right-radius:inherit}.mat-card>.mat-card-actions:last-child{margin-bottom:-8px;padding-bottom:0}.mat-card-actions .mat-button:first-child,.mat-card-actions .mat-raised-button:first-child,.mat-card-actions .mat-stroked-button:first-child{margin-left:0;margin-right:0}.mat-card-title:not(:first-child),.mat-card-subtitle:not(:first-child){margin-top:-4px}.mat-card-header .mat-card-subtitle:not(:first-child){margin-top:-8px}.mat-card>.mat-card-xl-image:first-child{margin-top:-8px}.mat-card>.mat-card-xl-image:last-child{margin-bottom:-8px}
+</style><style ng-transition="serverApp">.mat-radio-button{display:inline-block;-webkit-tap-highlight-color:transparent;outline:0}.mat-radio-label{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;display:inline-flex;align-items:center;white-space:nowrap;vertical-align:middle;width:100%}.mat-radio-container{box-sizing:border-box;display:inline-block;position:relative;width:20px;height:20px;flex-shrink:0}.mat-radio-outer-circle{box-sizing:border-box;height:20px;left:0;position:absolute;top:0;transition:border-color ease 280ms;width:20px;border-width:2px;border-style:solid;border-radius:50%}._mat-animation-noopable .mat-radio-outer-circle{transition:none}.mat-radio-inner-circle{border-radius:50%;box-sizing:border-box;height:20px;left:0;position:absolute;top:0;transition:transform ease 280ms,background-color ease 280ms;width:20px;transform:scale(0.001)}._mat-animation-noopable .mat-radio-inner-circle{transition:none}.mat-radio-checked .mat-radio-inner-circle{transform:scale(0.5)}.cdk-high-contrast-active .mat-radio-checked .mat-radio-inner-circle{border:solid 10px}.mat-radio-label-content{-webkit-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto;display:inline-block;order:0;line-height:inherit;padding-left:8px;padding-right:0}[dir=rtl] .mat-radio-label-content{padding-right:8px;padding-left:0}.mat-radio-label-content.mat-radio-label-before{order:-1;padding-left:0;padding-right:8px}[dir=rtl] .mat-radio-label-content.mat-radio-label-before{padding-right:0;padding-left:8px}.mat-radio-disabled,.mat-radio-disabled .mat-radio-label{cursor:default}.mat-radio-button .mat-radio-ripple{position:absolute;left:calc(50% - 20px);top:calc(50% - 20px);height:40px;width:40px;z-index:1;pointer-events:none}.mat-radio-button .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple){opacity:.16}.mat-radio-persistent-ripple{width:100%;height:100%;transform:none}.mat-radio-container:hover .mat-radio-persistent-ripple{opacity:.04}.mat-radio-button:not(.mat-radio-disabled).cdk-keyboard-focused .mat-radio-persistent-ripple,.mat-radio-button:not(.mat-radio-disabled).cdk-program-focused .mat-radio-persistent-ripple{opacity:.12}.mat-radio-persistent-ripple,.mat-radio-disabled .mat-radio-container:hover .mat-radio-persistent-ripple{opacity:0}@media(hover: none){.mat-radio-container:hover .mat-radio-persistent-ripple{display:none}}.mat-radio-input{bottom:0;left:50%}.cdk-high-contrast-active .mat-radio-disabled{opacity:.5}
+</style><style ng-transition="serverApp">.mat-slide-toggle{display:inline-block;height:24px;max-width:100%;line-height:24px;white-space:nowrap;outline:none;-webkit-tap-highlight-color:transparent}.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(16px, 0, 0)}[dir=rtl] .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(-16px, 0, 0)}.mat-slide-toggle.mat-disabled{opacity:.38}.mat-slide-toggle.mat-disabled .mat-slide-toggle-label,.mat-slide-toggle.mat-disabled .mat-slide-toggle-thumb-container{cursor:default}.mat-slide-toggle-label{display:flex;flex:1;flex-direction:row;align-items:center;height:inherit;cursor:pointer}.mat-slide-toggle-content{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mat-slide-toggle-label-before .mat-slide-toggle-label{order:1}.mat-slide-toggle-label-before .mat-slide-toggle-bar{order:2}[dir=rtl] .mat-slide-toggle-label-before .mat-slide-toggle-bar,.mat-slide-toggle-bar{margin-right:8px;margin-left:0}[dir=rtl] .mat-slide-toggle-bar,.mat-slide-toggle-label-before .mat-slide-toggle-bar{margin-left:8px;margin-right:0}.mat-slide-toggle-bar-no-side-margin{margin-left:0;margin-right:0}.mat-slide-toggle-thumb-container{position:absolute;z-index:1;width:20px;height:20px;top:-3px;left:0;transform:translate3d(0, 0, 0);transition:all 80ms linear;transition-property:transform}._mat-animation-noopable .mat-slide-toggle-thumb-container{transition:none}[dir=rtl] .mat-slide-toggle-thumb-container{left:auto;right:0}.mat-slide-toggle-thumb{height:20px;width:20px;border-radius:50%}.mat-slide-toggle-bar{position:relative;width:36px;height:14px;flex-shrink:0;border-radius:8px}.mat-slide-toggle-input{bottom:0;left:10px}[dir=rtl] .mat-slide-toggle-input{left:auto;right:10px}.mat-slide-toggle-bar,.mat-slide-toggle-thumb{transition:all 80ms linear;transition-property:background-color;transition-delay:50ms}._mat-animation-noopable .mat-slide-toggle-bar,._mat-animation-noopable .mat-slide-toggle-thumb{transition:none}.mat-slide-toggle .mat-slide-toggle-ripple{position:absolute;top:calc(50% - 20px);left:calc(50% - 20px);height:40px;width:40px;z-index:1;pointer-events:none}.mat-slide-toggle .mat-slide-toggle-ripple .mat-ripple-element:not(.mat-slide-toggle-persistent-ripple){opacity:.12}.mat-slide-toggle-persistent-ripple{width:100%;height:100%;transform:none}.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:.04}.mat-slide-toggle:not(.mat-disabled).cdk-keyboard-focused .mat-slide-toggle-persistent-ripple{opacity:.12}.mat-slide-toggle-persistent-ripple,.mat-slide-toggle.mat-disabled .mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:0}@media(hover: none){.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{display:none}}.cdk-high-contrast-active .mat-slide-toggle-thumb,.cdk-high-contrast-active .mat-slide-toggle-bar{border:1px solid}.cdk-high-contrast-active .mat-slide-toggle.cdk-keyboard-focused .mat-slide-toggle-bar{outline:2px dotted;outline-offset:5px}
+</style><style type="text/css">
+/*
+  @angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+  see http://bit.ly/2sd4HMP
+*/
+@media screen and (min-width: 600px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 4999.9px), screen and (max-width: 1919.9px), screen and (min-width: 1280px) and (max-width: 1919.9px), screen and (max-width: 1279.9px), screen and (min-width: 960px) and (max-width: 1279.9px), screen and (max-width: 959.9px), screen and (min-width: 600px) and (max-width: 959.9px), screen and (max-width: 599.9px), screen and (min-width: 0px) and (max-width: 599.9px), print {.fx-query-test{ }}
+</style><style ng-transition="serverApp">[_nghost-sc133]{display:block}.fullSVG[_ngcontent-sc133]   img[_ngcontent-sc133]{width:100%}.fullSVG[_ngcontent-sc133]     span.mat-button-wrapper{padding:0}.container[_ngcontent-sc133] > div[_ngcontent-sc133]{margin-bottom:5px}.container[_ngcontent-sc133] > div[_ngcontent-sc133]   button[_ngcontent-sc133]{margin-bottom:16px}</style><style ng-transition="serverApp">.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.cdk-high-contrast-active .mat-button-focus-overlay{background-color:#fff}.cdk-high-contrast-black-on-white .mat-button-focus-overlay{background-color:#000}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}
+</style><style ng-transition="serverApp">.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style></head>
 <body>
-<app-root></app-root>
-<script src="/fab-menu/runtime-es2015.f9d57246f940e213af75.js" type="module"></script><script src="/fab-menu/runtime-es5.f9d57246f940e213af75.js" nomodule defer></script><script src="/fab-menu/polyfills-es5.ef4b1e1fc703b3ff76e3.js" nomodule defer></script><script src="/fab-menu/polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="/fab-menu/scripts.90c5ba9d6e5093e03e2b.js" defer></script><script src="/fab-menu/main-es2015.82a6afc9860c41ac0815.js" type="module"></script><script src="/fab-menu/main-es5.82a6afc9860c41ac0815.js" nomodule defer></script></body>
-</html>
+<app-root _nghost-sc135="" ng-version="10.1.0"><div _ngcontent-sc135="" role="banner" class="toolbar"><img _ngcontent-sc135="" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" width="40"><span _ngcontent-sc135="">@angular-material-extensions/fab-menu</span><div _ngcontent-sc135="" class="spacer"></div><a _ngcontent-sc135="" aria-label="Github repository" href="https://github.com/angular-material-extensions" rel="noopener" target="_blank"><svg _ngcontent-sc135="" height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M12,2C6.48,2 2,6.48 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12C22,6.48 17.52,2 12,2Z"></path></svg></a><a _ngcontent-sc135="" aria-label="Angular on twitter" href="https://twitter.com/ngAnthonyy" rel="noopener" target="_blank" title="Twitter"><svg _ngcontent-sc135="" data-name="Logo — FIXED" height="24" id="twitter-logo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><defs _ngcontent-sc135=""><style _ngcontent-sc135=""> .cls-1 { fill: none; } .cls-2 { fill: #ffffff; } </style></defs><rect _ngcontent-sc135="" height="400" width="400" class="cls-1"></rect><path _ngcontent-sc135="" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" class="cls-2"></path></svg></a></div><div _ngcontent-sc135="" role="main" class="content"><div _ngcontent-sc135="" class="card highlight-card card-small"><svg _ngcontent-sc135="" alt="Rocket Ship" height="101.678" id="rocket" viewBox="0 0 101.678 101.678" width="101.678" xmlns="http://www.w3.org/2000/svg"><g _ngcontent-sc135="" data-name="Group 83" id="Group_83" transform="translate(-141 -696)"><circle _ngcontent-sc135="" cx="50.839" cy="50.839" data-name="Ellipse 8" fill="#dd0031" id="Ellipse_8" r="50.839" transform="translate(141 696)"></circle><g _ngcontent-sc135="" data-name="Group 47" id="Group_47" transform="translate(165.185 720.185)"><path _ngcontent-sc135="" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" data-name="Path 33" fill="#fff" id="Path_33" transform="translate(0.371 3.363)"></path><path _ngcontent-sc135="" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" data-name="Path 34" fill="#fff" id="Path_34" transform="translate(0 0.005)"></path></g></g></svg><span _ngcontent-sc135="">fab-menu demo app is running!</span><svg _ngcontent-sc135="" alt="Rocket Ship Smoke" height="1083.632" id="rocket-smoke" viewBox="0 0 516.119 1083.632" width="516.119" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" data-name="Path 40" fill="#f5f5f5" id="Path_40" transform="translate(-147.025 -140.939)"></path></svg></div><h2 _ngcontent-sc135="">Resources</h2><p _ngcontent-sc135="">Here are some links to help you get started:</p><div _ngcontent-sc135="" class="card-container"><a _ngcontent-sc135="" href="https://github.com/angular-material-extensions/fab-menu" rel="noopener" target="_blank" class="card"><svg _ngcontent-sc135="" height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M12,2C6.48,2 2,6.48 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12C22,6.48 17.52,2 12,2Z"></path></svg><span _ngcontent-sc135="">Github repository</span><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><a _ngcontent-sc135="" href="doc/index.html" rel="noopener" target="_blank" class="card"><svg _ngcontent-sc135="" height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M12,8C13.66,8 15,6.66 15,5C15,3.34 13.66,2 12,2C10.34,2 9,3.34 9,5C9,6.66 10.34,8 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z"></path></svg><span _ngcontent-sc135="">Library Documentation</span><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><a _ngcontent-sc135="" href="https://www.npmjs.com/package/@angular-material-extensions/fab-menu" rel="noopener" target="_blank" class="card"><svg _ngcontent-sc135="" height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M3,3V21H21V3H3M6,6H18V18H15V9H12V18H6V6Z"></path></svg><span _ngcontent-sc135="">npm</span><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a></div><h2 _ngcontent-sc135="">Install</h2><p _ngcontent-sc135="">run the following command in your favorite terminal to install the library</p><div _ngcontent-sc135="" class="terminal"><pre _ngcontent-sc135="">ng add @angular-material-extensions/fab-menu</pre></div><h2 _ngcontent-sc135="">Usage</h2><mat-card _ngcontent-sc135="" class="mat-card mat-focus-indicator card-container-example _mat-animation-noopable"><mat-card-content _ngcontent-sc135="" class="mat-card-content"><p _ngcontent-sc135=""> Color: <mat-radio-group _ngcontent-sc135="" role="radiogroup" aria-label="Select an example option" class="mat-radio-group ng-pristine ng-valid ng-touched"><mat-radio-button _ngcontent-sc135="" value="primary" class="mat-radio-button _mat-animation-noopable mat-accent mat-radio-checked" tabindex="-1" id="mat-radio-2"><label class="mat-radio-label" for="mat-radio-2-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-2-input" tabindex="0" name="mat-radio-group-0" value="primary" checked=""><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Primary</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" value="accent" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-3"><label class="mat-radio-label" for="mat-radio-3-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-3-input" tabindex="0" name="mat-radio-group-0" value="accent"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Accent</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" value="warn" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-4"><label class="mat-radio-label" for="mat-radio-4-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-4-input" tabindex="0" name="mat-radio-group-0" value="warn"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Warn</div></label></mat-radio-button></mat-radio-group></p><p _ngcontent-sc135=""> Pick an example: <mat-radio-group _ngcontent-sc135="" role="radiogroup" aria-label="Select an example option" class="mat-radio-group ng-pristine ng-valid ng-touched"><mat-radio-button _ngcontent-sc135="" class="mat-radio-button _mat-animation-noopable mat-accent mat-radio-checked" tabindex="-1" id="mat-radio-6"><label class="mat-radio-label" for="mat-radio-6-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-6-input" tabindex="0" name="mat-radio-group-4" value="1" checked=""><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Professions</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-7"><label class="mat-radio-label" for="mat-radio-7-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-7-input" tabindex="0" name="mat-radio-group-4" value="2"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Countries</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-8"><label class="mat-radio-label" for="mat-radio-8-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-8-input" tabindex="0" name="mat-radio-group-4" value="3"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Numbers</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-9"><label class="mat-radio-label" for="mat-radio-9-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-9-input" tabindex="0" name="mat-radio-group-4" value="4"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Randmon</div></label></mat-radio-button></mat-radio-group></p><p _ngcontent-sc135=""> Direction <mat-radio-group _ngcontent-sc135="" role="radiogroup" aria-label="Select a direction" class="mat-radio-group ng-pristine ng-valid ng-touched"><mat-radio-button _ngcontent-sc135="" value="top" class="mat-radio-button _mat-animation-noopable mat-accent mat-radio-checked" tabindex="-1" id="mat-radio-11"><label class="mat-radio-label" for="mat-radio-11-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-11-input" tabindex="0" name="mat-radio-group-9" value="top" checked=""><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Top</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" value="bottom" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-12"><label class="mat-radio-label" for="mat-radio-12-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-12-input" tabindex="0" name="mat-radio-group-9" value="bottom"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Bottom</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" value="left" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-13"><label class="mat-radio-label" for="mat-radio-13-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-13-input" tabindex="0" name="mat-radio-group-9" value="left"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Left</div></label></mat-radio-button><mat-radio-button _ngcontent-sc135="" value="right" class="mat-radio-button _mat-animation-noopable mat-accent" tabindex="-1" id="mat-radio-14"><label class="mat-radio-label" for="mat-radio-14-input"><div class="mat-radio-container"><div class="mat-radio-outer-circle"></div><div class="mat-radio-inner-circle"></div><input type="radio" class="mat-radio-input cdk-visually-hidden" id="mat-radio-14-input" tabindex="0" name="mat-radio-group-9" value="right"><div mat-ripple="" class="mat-ripple mat-radio-ripple mat-focus-indicator"><div class="mat-ripple-element mat-radio-persistent-ripple"></div></div></div><div class="mat-radio-label-content"><span style="display: none;">&nbsp;</span>Right</div></label></mat-radio-button></mat-radio-group></p><p _ngcontent-sc135=""><mat-slide-toggle _ngcontent-sc135="" class="mat-slide-toggle mat-accent _mat-animation-noopable" id="mat-slide-toggle-1" tabindex="-1"><label class="mat-slide-toggle-label" for="mat-slide-toggle-1-input"><div class="mat-slide-toggle-bar"><input type="checkbox" role="switch" class="mat-slide-toggle-input cdk-visually-hidden" id="mat-slide-toggle-1-input" tabindex="0" aria-checked="false"><div class="mat-slide-toggle-thumb-container"><div class="mat-slide-toggle-thumb"></div><div mat-ripple="" class="mat-ripple mat-slide-toggle-ripple mat-focus-indicator"><div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div></div></div></div><span class="mat-slide-toggle-content"><span style="display: none;">&nbsp;</span>isActive</span></label></mat-slide-toggle></p><p _ngcontent-sc135=""><mat-slide-toggle _ngcontent-sc135="" class="mat-slide-toggle mat-accent _mat-animation-noopable" id="mat-slide-toggle-2" tabindex="-1"><label class="mat-slide-toggle-label" for="mat-slide-toggle-2-input"><div class="mat-slide-toggle-bar"><input type="checkbox" role="switch" class="mat-slide-toggle-input cdk-visually-hidden" id="mat-slide-toggle-2-input" tabindex="0" aria-checked="false"><div class="mat-slide-toggle-thumb-container"><div class="mat-slide-toggle-thumb"></div><div mat-ripple="" class="mat-ripple mat-slide-toggle-ripple mat-focus-indicator"><div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div></div></div></div><span class="mat-slide-toggle-content"><span style="display: none;">&nbsp;</span>disabled</span></label></mat-slide-toggle></p><div _ngcontent-sc135="" fxlayout="column" style="height:80%;-webkit-flex-direction:column;box-sizing:border-box;display:flex;flex-direction:column;-webkit-align-content:flex-end;-webkit-align-items:flex-end;-webkit-justify-content:flex-end;align-content:flex-end;align-items:flex-end;justify-content:flex-end;"><mat-fab-menu _ngcontent-sc135="" _nghost-sc133="" class="ng-tns-c133-0"><div _ngcontent-sc133="" fxlayoutalign="center center" fxlayoutgap="16px" class="container ng-tns-c133-0" style="-webkit-align-content:center;-webkit-align-items:center;-webkit-flex-direction:column-reverse;-webkit-justify-content:center;align-content:center;align-items:center;box-sizing:border-box;display:flex;flex-direction:column-reverse;justify-content:center;"><div _ngcontent-sc133="" fxlayoutalign="center" class="ng-tns-c133-0" style="-webkit-align-content:stretch;-webkit-align-items:stretch;-webkit-flex-direction:row;-webkit-justify-content:center;align-content:stretch;align-items:stretch;box-sizing:border-box;display:flex;flex-direction:row;justify-content:center;"><button _ngcontent-sc133="" mat-fab="" class="mat-focus-indicator ng-tns-c133-0 mat-button-base mat-primary mat-fab _mat-animation-noopable"><span class="mat-button-wrapper"><mat-icon _ngcontent-sc133="" role="img" class="mat-icon notranslate ng-trigger ng-trigger-fabToggler material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font" style="transform:rotate(0deg);">add</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></div><!----></div></mat-fab-menu></div></mat-card-content></mat-card><mat-fab-menu _ngcontent-sc135="" color="primary" direction="top" class="fix-bottom-right ng-tns-c133-1" _nghost-sc133=""><div _ngcontent-sc133="" fxlayoutalign="center center" fxlayoutgap="16px" class="container ng-tns-c133-1" style="-webkit-align-content:center;-webkit-align-items:center;-webkit-flex-direction:column-reverse;-webkit-justify-content:center;align-content:center;align-items:center;box-sizing:border-box;display:flex;flex-direction:column-reverse;justify-content:center;"><div _ngcontent-sc133="" fxlayoutalign="center" class="ng-tns-c133-1" style="-webkit-align-content:stretch;-webkit-align-items:stretch;-webkit-flex-direction:row;-webkit-justify-content:center;align-content:stretch;align-items:stretch;box-sizing:border-box;display:flex;flex-direction:row;justify-content:center;"><button _ngcontent-sc133="" mat-fab="" class="mat-focus-indicator ng-tns-c133-1 mat-button-base mat-primary mat-fab _mat-animation-noopable"><span class="mat-button-wrapper"><mat-icon _ngcontent-sc133="" role="img" class="mat-icon notranslate ng-trigger ng-trigger-fabToggler material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font" style="">add</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></div><!----></div></mat-fab-menu><markdown _ngcontent-sc135="" src="assets/md/html.md"></markdown><p _ngcontent-sc135="">For more info, please read the official readme - see the links above GITHUB - DOCS - NPM</p><h2 _ngcontent-sc135="" style="margin-top: 4rem;">Next Steps</h2><p _ngcontent-sc135="">What do you want to do next with your app? Here are some awesome suggested libraries for you!</p><input _ngcontent-sc135="" type="hidden"><div _ngcontent-sc135="" class="card-container"><div _ngcontent-sc135="" tabindex="0" class="card card-small"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg><span _ngcontent-sc135="">ngx-auth-firebaseui</span></div><div _ngcontent-sc135="" tabindex="0" class="card card-small"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg><span _ngcontent-sc135="">password-strength</span></div><div _ngcontent-sc135="" tabindex="0" class="card card-small"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg><span _ngcontent-sc135="">google-maps-autocomplete</span></div><div _ngcontent-sc135="" tabindex="0" class="card card-small"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg><span _ngcontent-sc135="">pages</span></div><div _ngcontent-sc135="" tabindex="0" class="card card-small"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg><span _ngcontent-sc135="">links-preview</span></div></div><div _ngcontent-sc135="" class="terminal"><pre _ngcontent-sc135="" class="ng-star-inserted">ng add ngx-auth-firebaseui</pre><!----><!----><!----><!----><!----></div><div _ngcontent-sc135="" class="card-container"><a _ngcontent-sc135="" href="https://github.com/angular-material-extensions" rel="noopener" target="_blank" title="Other awesome libraries" class="circle-link"><svg _ngcontent-sc135="" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path _ngcontent-sc135="" d="M12,2.5L20.84,5.65L19.5,17.35L12,21.5L4.5,17.35L3.16,5.65L12,2.5M12,4.6L6.47,17H8.53L9.64,14.22H14.34L15.45,17H17.5L12,4.6M13.62,12.5H10.39L12,8.63L13.62,12.5Z" fill="rgb(40,53,147)"></path></svg></a><a _ngcontent-sc135="" href="https://twitter.com/ngAnthonyy" rel="noopener" target="_blank" title="Anthony Nahas on Twitter" class="circle-link"><svg _ngcontent-sc135="" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path _ngcontent-sc135="" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" fill="#1DA1F2"></path></svg></a><a _ngcontent-sc135="" href="https://www.xing.com/profile/Anthony_Nahas2" rel="noopener" target="_blank" title="Anthony Nahas on Xing" class="circle-link"><svg _ngcontent-sc135="" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path _ngcontent-sc135="" d="M17.67,2C17.24,2 17.05,2.27 16.9,2.55C16.9,2.55 10.68,13.57 10.5,13.93L14.58,21.45C14.72,21.71 14.94,22 15.38,22H18.26C18.44,22 18.57,21.93 18.64,21.82C18.72,21.69 18.72,21.53 18.64,21.37L14.57,13.92L20.96,2.63C21.04,2.47 21.04,2.31 20.97,2.18C20.89,2.07 20.76,2 20.58,2M5.55,5.95C5.38,5.95 5.23,6 5.16,6.13C5.08,6.26 5.09,6.41 5.18,6.57L7.12,9.97L4.06,15.37C4,15.53 4,15.69 4.06,15.82C4.13,15.94 4.26,16 4.43,16H7.32C7.75,16 7.96,15.72 8.11,15.45C8.11,15.45 11.1,10.16 11.22,9.95L9.24,6.5C9.1,6.24 8.88,5.95 8.43,5.95" fill="#026466"></path></svg></a><a _ngcontent-sc135="" href="https://www.reddit.com/user/anthonynahas" rel="noopener" target="_blank" title="Anthony Nahas on Reddit" class="circle-link"><svg _ngcontent-sc135="" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path _ngcontent-sc135="" d="M22,12.14C22,10.92 21,9.96 19.81,9.96C19.22,9.96 18.68,10.19 18.29,10.57C16.79,9.5 14.72,8.79 12.43,8.7L13.43,4L16.7,4.71C16.73,5.53 17.41,6.19 18.25,6.19C19.11,6.19 19.81,5.5 19.81,4.63C19.81,3.77 19.11,3.08 18.25,3.08C17.65,3.08 17.11,3.43 16.86,3.95L13.22,3.18C13.11,3.16 13,3.18 12.93,3.24C12.84,3.29 12.79,3.38 12.77,3.5L11.66,8.72C9.33,8.79 7.23,9.5 5.71,10.58C5.32,10.21 4.78,10 4.19,10C2.97,10 2,10.96 2,12.16C2,13.06 2.54,13.81 3.29,14.15C3.25,14.37 3.24,14.58 3.24,14.81C3.24,18.18 7.16,20.93 12,20.93C16.84,20.93 20.76,18.2 20.76,14.81C20.76,14.6 20.75,14.37 20.71,14.15C21.46,13.81 22,13.04 22,12.14M7,13.7C7,12.84 7.68,12.14 8.54,12.14C9.4,12.14 10.1,12.84 10.1,13.7A1.56,1.56 0 0,1 8.54,15.26C7.68,15.28 7,14.56 7,13.7M15.71,17.84C14.63,18.92 12.59,19 12,19C11.39,19 9.35,18.9 8.29,17.84C8.13,17.68 8.13,17.43 8.29,17.27C8.45,17.11 8.7,17.11 8.86,17.27C9.54,17.95 11,18.18 12,18.18C13,18.18 14.47,17.95 15.14,17.27C15.3,17.11 15.55,17.11 15.71,17.27C15.85,17.43 15.85,17.68 15.71,17.84M15.42,15.28C14.56,15.28 13.86,14.58 13.86,13.72A1.56,1.56 0 0,1 15.42,12.16C16.28,12.16 17,12.86 17,13.72C17,14.56 16.28,15.28 15.42,15.28Z" fill="#ff4500"></path></svg></a><a _ngcontent-sc135="" href="https://www.linkedin.com/in/anthony-nahas-926245119/" rel="noopener" target="_blank" title="LinkedIn" class="circle-link"><svg _ngcontent-sc135="" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path _ngcontent-sc135="" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" fill="#2867B2"></path></svg></a><a _ngcontent-sc135="" href="https://github.com/AnthonyNahas" rel="noopener" target="_blank" title="See Author Github Profile" class="circle-link"><svg _ngcontent-sc135="" height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M12,2C6.48,2 2,6.48 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12C22,6.48 17.52,2 12,2Z"></path></svg></a><a _ngcontent-sc135="" href="https://gitter.im/angular-material-extensions/Lobby" rel="noopener" target="_blank" title="Join the Conversation on Gitter" class="circle-link"><svg _ngcontent-sc135="" alt="Gitter Logo" height="19.447" viewBox="0 0 19.447 19.447" width="19.447" xmlns="http://www.w3.org/2000/svg"><g _ngcontent-sc135="" data-name="Group 40" id="Group_40" transform="translate(-1612 -405)"><rect _ngcontent-sc135="" data-name="Rectangle 19" fill="#e60257" height="19.447" id="Rectangle_19" transform="translate(1612 405)" width="19.447"></rect><g _ngcontent-sc135="" id="gitter" transform="translate(1617.795 408.636)"><g _ngcontent-sc135="" data-name="Group 33" id="Group_33" transform="translate(0 0)"><rect _ngcontent-sc135="" data-name="Rectangle 15" fill="#fff" height="9.601" id="Rectangle_15" transform="translate(2.304 2.324)" width="1.04"></rect><rect _ngcontent-sc135="" data-name="Rectangle 16" fill="#fff" height="9.601" id="Rectangle_16" transform="translate(4.607 2.324)" width="1.04"></rect><rect _ngcontent-sc135="" data-name="Rectangle 17" fill="#fff" height="4.648" id="Rectangle_17" transform="translate(6.91 2.324)" width="1.04"></rect><rect _ngcontent-sc135="" data-name="Rectangle 18" fill="#fff" height="6.971" id="Rectangle_18" transform="translate(0 0)" width="1.04"></rect></g></g></g></svg></a></div><div _ngcontent-sc135="">Icons made by <a _ngcontent-sc135="" href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a _ngcontent-sc135="" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><div _ngcontent-sc135="">Icons made by <a _ngcontent-sc135="" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a _ngcontent-sc135="" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><div _ngcontent-sc135="">Icons made by <a _ngcontent-sc135="" href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a _ngcontent-sc135="" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><footer _ngcontent-sc135=""> Love this library?&nbsp; <a _ngcontent-sc135="" href="https://github.com/angular-material-extensions/fab-menu" rel="noopener" target="_blank"> Give our repo a star. <div _ngcontent-sc135="" class="github-star-badge"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-sc135="" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> Star </div></a><a _ngcontent-sc135="" href="https://github.com/angular-material-extensions/fab-menu" rel="noopener" target="_blank"><svg _ngcontent-sc135="" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="material-icons"><path _ngcontent-sc135="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"></path><path _ngcontent-sc135="" d="M0 0h24v24H0z" fill="none"></path></svg></a></footer><svg _ngcontent-sc135="" alt="Gray Clouds Background" height="485.677" id="clouds" viewBox="0 0 2611.084 485.677" width="2611.084" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-sc135="" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" data-name="Path 39" fill="#eee" id="Path_39" transform="translate(142.69 -634.312)"></path></svg></div></app-root>
+<script src="runtime-es2015.41eb3616844b6c96e4f3.js" type="module"></script><script src="runtime-es5.41eb3616844b6c96e4f3.js" nomodule="" defer=""></script><script src="polyfills-es5.9a86da6c2088d4168032.js" nomodule="" defer=""></script><script src="polyfills-es2015.a5a3912819000e087479.js" type="module"></script><script src="scripts.a58681b4e3eb1b7e6c8c.js" defer=""></script><script src="main-es2015.355b59d348b999de7976.js" type="module"></script><script src="main-es5.355b59d348b999de7976.js" nomodule="" defer=""></script>
+
+</body></html><!-- This page was prerendered with Angular Universal -->

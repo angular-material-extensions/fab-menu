@@ -32,11 +32,11 @@
 
 <p align="center">
   <img alt="angular-material-extensions's logo"
-   height="256px" width="256px" style="text-align: center;" 
+   height="256px" width="256px" style="text-align: center;"
    src="https://cdn.jsdelivr.net/gh/angular-material-extensions/fab-menu@master/assets/angular-material-extensions-logo.svg">
 </p>
 
-<h1 id="angular-material-extensionsfab-menu---angular-material-component-that-allow-users-to-select-a-country-or-nationality-with-an-autocomplete-feature---angular-v8-supported-incl-schematics">@angular-material-extensions/fab-menu - Angular Material component that allow users to select a country or nationality with an autocomplete feature - Angular V8 supported incl. schematics</h1>
+<h1 id="angular-material-extensionsfab-menu---angular-material-component-that-allow-users-to-select-a-country-or-nationality-with-an-autocomplete-feature---angular-v10-supported-incl-schematics">@angular-material-extensions/fab-menu - Angular Material component that allow users to select a country or nationality with an autocomplete feature - Angular V10 supported incl. schematics</h1>
 <p><a href="https://badge.fury.io/js/%40angular-material-extensions%2Ffab-menu"><img src="https://badge.fury.io/js/%40angular-material-extensions%2Ffab-menu.svg" alt="npm version" class="img-responsive"></a>
 <a href="https://angular-material-extensions.github.io/fab-menu"><img src="https://img.shields.io/badge/demo-online-ed1c46.svg" alt="npm demo" class="img-responsive"></a>
 <a href="https://angular-material-extensions.github.io/fab-menu/doc/index.html"><img src="https://img.shields.io/badge/docs-typedoc-4D0080.svg" alt="docs: typedoc" class="img-responsive"></a>
@@ -45,7 +45,6 @@
 <a href="https://codecov.io/gh/angular-material-extensions/fab-menu"><img src="https://codecov.io/gh/angular-material-extensions/fab-menu/branch/master/graph/badge.svg" alt="codecov" class="img-responsive"></a>
 <a href="https://david-dm.org/angular-material-extensions/fab-menu"><img src="https://david-dm.org/angular-material-extensions/fab-menu/status.svg" alt="dependency Status" class="img-responsive"></a>
 <a href="https://david-dm.org/angular-material-extensions/fab-menu#info=devDependencies"><img src="https://david-dm.org/angular-material-extensions/fab-menu/dev-status.svg?branch=master" alt="devDependency Status" class="img-responsive"></a>
-<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/angular-material-extensions/fab-menu.svg" alt="Greenkeeper Badge" class="img-responsive"></a>
 <a href="https://github.com/angular-material-extensions/fab-menu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/angular-material-extensions/fab-menu.svg?style=flat-square" alt="license" class="img-responsive"></a></p>
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
@@ -60,7 +59,7 @@
 <h2 id="built-by-and-for-developers-heart">Built by and for developers :heart:</h2>
 <p>Do you have any question or suggestion ? Please do not hesitate to contact us!
 Alternatively, provide a PR | open an appropriate issue <a href="https://github.com/angular-material-extensions/fab-menu/issues">here</a></p>
-<p>If you like this project, support <a href="https://github.com/angular-material-extensions">angular-material-extensions</a> 
+<p>If you like this project, support <a href="https://github.com/angular-material-extensions">angular-material-extensions</a>
 by starring :star: and sharing it :loudspeaker:</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
@@ -171,28 +170,41 @@ export class AppModule {
 <td align="left">Whether the component is disabled</td>
 </tr>
 <tr>
+<td align="left">closeAfterSelection</td>
+<td align="center"><code>Input()</code></td>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>true</code></td>
+<td align="left">Close after selecting a fab menu item</td>
+</tr>
+<tr>
 <td align="left">onFabMenuItemSelected</td>
 <td align="center"><code>Output()</code></td>
-<td align="center">`EventEmitter&lt;string</td>
-<td align="center">number&gt;`</td>
-<td align="left">-</td>
+<td align="center"><code>EventEmitter&lt;string | number&gt;</code></td>
+<td align="center">-</td>
+<td align="left">emits the selected button by id</td>
 </tr>
 </tbody>
 </table>
+<h3 id="methods">Methods</h3>
+<div><pre class="line-numbers"><code class="language-typescript">&#64;ViewChild(&#39;matFabMenu&#39;, { static: false }) matFabMenu: MatFabMenu;</code></pre></div><p><code>toggle()</code> will toggle the <code>isActive</code> property</p>
 <p>Important interfaces or type</p>
-<div><pre class="line-numbers"><code class="language-typescript">type MatFabMenuDirection = &#39;top&#39; | &#39;bottom&#39; | &#39;left&#39; | &#39;right&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">
+import {ThemePalette, TooltipPosition} from &#39;&#64;angular/material&#39;;
 
 interface MatFabMenu {
-  id: number;
+  id: string | number;
   icon?: string; // please use either icon or imgUrl
-  imgUrl?: string; // please use either icon or imgUrl
-  tooltip?: string; // coming soon
-  color?: ThemePalette;
   iconColor?: ThemePalette;
-}</code></pre></div><a name="usage"/>
+  imgUrl?: string; // please use either icon or imgUrl
+  tooltip?: string;
+  tooltipPosition?: TooltipPosition;
+  color?: ThemePalette;
+}
+
+type MatFabMenuDirection = &#39;top&#39; | &#39;bottom&#39; | &#39;left&#39; | &#39;right&#39;;</code></pre></div><a name="usage"/>
 
 <h2 id="usage"><a href="https://angular-material-extensions.github.io/fab-menu">Usage</a></h2>
-<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot; 
+<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot;
               [fabButtons]=&quot;fabButtonsRandom&quot;&gt;
 &lt;/mat-fab-menu&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">import {MatFabMenu} from &#39;&#64;angular-material-extensions/fab-menu&#39;;
 
@@ -233,14 +245,14 @@ fabCountries: MatFabMenu[] = [
       id: 4,
       imgUrl: &#39;assets/countrys-flags/svg/lebanon.svg&#39;
     },
-  ];</code></pre></div><div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot; 
+  ];</code></pre></div><div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot;
               [fabButtons]=&quot;fabButtonsRandom&quot;&gt;
 &lt;/mat-fab-menu&gt;</code></pre></div><p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
    src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/top.png">
 </p>
 
-<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot; 
+<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot;
               direction=&quot;bottom&quot;
               [fabButtons]=&quot;fabButtonsRandom&quot;&gt;
 &lt;/mat-fab-menu&gt;</code></pre></div><p align="center">
@@ -248,7 +260,7 @@ fabCountries: MatFabMenu[] = [
    src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/bottom.png">
 </p>
 
-<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot; 
+<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot;
               direction=&quot;left&quot;
               [fabButtons]=&quot;fabButtonsRandom&quot;&gt;
 &lt;/mat-fab-menu&gt;</code></pre></div><p align="center">
@@ -256,7 +268,7 @@ fabCountries: MatFabMenu[] = [
    src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/left.png">
 </p>
 
-<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot; 
+<div><pre class="line-numbers"><code class="language-html">&lt;mat-fab-menu color=&quot;primary&quot;
               direction=&quot;right&quot;
               [fabButtons]=&quot;fabButtonsRandom&quot;&gt;
 &lt;/mat-fab-menu&gt;</code></pre></div><p align="center">
@@ -267,6 +279,7 @@ fabCountries: MatFabMenu[] = [
 
 <h3 id="run-demo-app-locally">Run Demo App Locally</h3>
 <p>Build the library</p>
+<p>after installing the dependencies with <code>npm i</code></p>
 <div><pre class="line-numbers"><code class="language-bash">$ npm run build:lib</code></pre></div><p>Serve the demo app</p>
 <div><pre class="line-numbers"><code class="language-bash">$ npm start</code></pre></div><h2 id="other-angular-libraries">Other Angular Libraries</h2>
 <ul>
@@ -300,7 +313,7 @@ fabCountries: MatFabMenu[] = [
 <a name="license"/>
 
 <h2 id="license">License</h2>
-<p>Copyright (c) 2019 <a href="https://github.com/AnthonyNahas">Anthony Nahas</a>. Licensed under the MIT License (MIT)</p>
+<p>Copyright (c) 2019-2020 <a href="https://github.com/AnthonyNahas">Anthony Nahas</a>. Licensed under the MIT License (MIT)</p>
 
 
 
