@@ -48,7 +48,7 @@
     "angulartics2": "^10.0.0",
     "express": "^4.17.1",
     "ngx-markdown": "^10.1.1",
-    "rxjs": "^6.6.2",
+    "rxjs": "^6.6.3",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.3"
   },
