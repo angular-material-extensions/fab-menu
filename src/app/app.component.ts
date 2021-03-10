@@ -116,6 +116,7 @@ export class AppComponent implements OnInit {
         return;
       case 'right':
         this.layout = 'end start';
+        return;
       default:
         this.layout = 'end end';
     }
