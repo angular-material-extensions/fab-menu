@@ -1,11 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {MatFabMenu, MatFabMenuDirection} from '@angular-material-extensions/fab-menu';
+import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 
+import {
+  MatFabMenu,
+  MatFabMenuDirection,
+} from '@angular-material-extensions/fab-menu';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'fab-menu';
@@ -20,38 +23,38 @@ export class AppComponent implements OnInit {
   fabButtonsRandom: MatFabMenu[] = [
     {
       id: 1,
-      icon: 'create'
+      icon: 'create',
     },
     {
       id: 2,
-      icon: 'mail'
+      icon: 'mail',
     },
     {
       id: 3,
-      icon: 'file_copy'
+      icon: 'file_copy',
     },
     {
       id: 4,
-      icon: 'phone'
+      icon: 'phone',
     },
   ];
 
   fabProfessions: MatFabMenu[] = [
     {
       id: 1,
-      imgUrl: 'assets/professions/svg/001-accountant.svg'
+      imgUrl: 'assets/professions/svg/001-accountant.svg',
     },
     {
       id: 2,
-      imgUrl: 'assets/professions/svg/005-accountant.svg'
+      imgUrl: 'assets/professions/svg/005-accountant.svg',
     },
     {
       id: 3,
-      imgUrl: 'assets/professions/svg/013-biochemist.svg'
+      imgUrl: 'assets/professions/svg/013-biochemist.svg',
     },
     {
       id: 4,
-      imgUrl: 'assets/professions/svg/017-engineer.svg'
+      imgUrl: 'assets/professions/svg/017-engineer.svg',
     },
   ];
 
@@ -60,48 +63,48 @@ export class AppComponent implements OnInit {
       id: 1,
       imgUrl: 'assets/countrys-flags/svg/canada.svg',
       tooltip: 'canada',
-      tooltipPosition: 'before'
+      tooltipPosition: 'before',
     },
     {
       id: 2,
       imgUrl: 'assets/countrys-flags/svg/germany.svg',
       tooltip: 'germany',
-      tooltipPosition: 'before'
+      tooltipPosition: 'before',
     },
     {
       id: 3,
       imgUrl: 'assets/countrys-flags/svg/france.svg',
       tooltip: 'france',
-      tooltipPosition: 'before'
+      tooltipPosition: 'before',
     },
     {
       id: 4,
       imgUrl: 'assets/countrys-flags/svg/lebanon.svg',
       tooltip: 'lebanon',
-      tooltipPosition: 'before'
+      tooltipPosition: 'before',
     },
   ];
 
   fabNumbers: MatFabMenu[] = [
     {
       id: 1,
-      imgUrl: 'assets/numbers/svg/one.svg'
+      imgUrl: 'assets/numbers/svg/one.svg',
     },
     {
       id: 2,
-      imgUrl: 'assets/numbers/svg/two.svg'
+      imgUrl: 'assets/numbers/svg/two.svg',
     },
     {
       id: 3,
-      imgUrl: 'assets/numbers/svg/three.svg'
+      imgUrl: 'assets/numbers/svg/three.svg',
     },
     {
       id: 4,
-      imgUrl: 'assets/numbers/svg/four.svg'
+      imgUrl: 'assets/numbers/svg/four.svg',
     },
     {
       id: 5,
-      imgUrl: 'assets/numbers/svg/five.svg'
+      imgUrl: 'assets/numbers/svg/five.svg',
     },
   ];
 
@@ -113,7 +116,7 @@ export class AppComponent implements OnInit {
     if (this.direction === 'bottom') {
       this.layout = 'start end';
     } else if (this.direction === 'right') {
-      this.layout = 'start start';
+      this.layout = 'end start';
     } else {
       this.layout = 'end end';
     }

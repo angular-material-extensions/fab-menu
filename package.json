@@ -8,7 +8,7 @@
     "build:prod": "ng build --prod",
     "build:docs": "npx compodoc -p projects/angular-material-extensions/fab-menu/tsconfig.lib.json --hideGenerator --disableCoverage -d dist/browser/doc/",
     "build:lib": "ng build @angular-material-extensions/fab-menu --prod",
-    "build:lib:Watch": "ng build @angular-material-extensions/fab-menu --watch",
+    "build:lib:watch": "ng build @angular-material-extensions/fab-menu --watch",
     "deploy": "ng deploy --base-href=/fab-menu/ --no-build",
     "generate:prerender": "cd dist && node prerender",
     "test": "jest",

@@ -1,7 +1,16 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {speedDialFabAnimations} from './mat-fab-menu.animations';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { TooltipPosition } from '@angular/material/tooltip';
+
+import { speedDialFabAnimations } from './mat-fab-menu.animations';
 
 export interface MatFabMenu {
   id: string | number;
@@ -19,40 +28,24 @@ export type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
   selector: 'mat-fab-menu',
   templateUrl: 'mat-fab-menu.component.html',
   styleUrls: ['mat-fab-menu.component.scss'],
-  animations: speedDialFabAnimations
+  animations: speedDialFabAnimations,
 })
 export class MatFabMenuComponent implements OnInit, OnChanges {
-
-  @Input()
-  fabButtons: MatFabMenu[];
-
-  @Input()
-  icon = 'add';
-
-  @Input()
-  direction: MatFabMenuDirection = 'top';
-
-  @Input()
-  color: ThemePalette = 'accent';
-
-  @Input()
-  isActive: boolean;
-
-  @Input()
-  disabled: boolean;
-
-  @Input()
-  closeAfterSelection = true;
+  @Input() fabButtons: MatFabMenu[];
+  @Input() icon = 'add';
+  @Input() direction: MatFabMenuDirection = 'top';
+  @Input() color: ThemePalette = 'accent';
+  @Input() isActive: boolean;
+  @Input() disabled: boolean;
+  @Input() closeAfterSelection = true;
 
   // tslint:disable-next-line:no-output-on-prefix
-  @Output()
-  onFabMenuItemSelected: EventEmitter<string | number> = new EventEmitter<string | number>();
+  @Output() onFabMenuItemSelected = new EventEmitter<string | number>();
 
   layout: any;
   layout2: any;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.adjustLayout();
