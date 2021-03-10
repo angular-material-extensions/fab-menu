@@ -1,11 +1,17 @@
 ```html
-<mat-fab-menu color="primary" 
-              [fabButtons]="fabButtonsRandom">
-</mat-fab-menu>
+<mat-fab-menu
+  color="primary"
+  [fabButtons]="fabButtonsRandom"
+></mat-fab-menu>
+
+<mat-mini-fab-menu
+  color="primary"
+  [fabButtons]="fabButtonsRandom"
+></mat-mini-fab-menu>
 ```
 
 ```typescript
-import {MatFabMenu} from '@angular-material-extensions/fab-menu';
+import { MatFabMenu } from '@angular-material-extensions/fab-menu';
 
 fabButtonsRandom: MatFabMenu[] = [
     {

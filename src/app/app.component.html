@@ -531,76 +531,104 @@
 
   <mat-card class="card-container-example">
     <mat-card-content>
+      <h4>Type</h4>
       <p>
-        Color:
-        <mat-radio-group
-          aria-label="Select an example option"
-          [(ngModel)]="color"
+        <mat-button-toggle-group
+          name="type"
+          aria-label="Select a menu type"
+          [(ngModel)]="type"
         >
-          <mat-radio-button value="primary">Primary</mat-radio-button>
-          <mat-radio-button value="accent">Accent</mat-radio-button>
-          <mat-radio-button value="warn">Warn</mat-radio-button>
-        </mat-radio-group>
-      </p>
-      <p>
-        Pick an example:
-        <mat-radio-group
-          aria-label="Select an example option"
-          [(ngModel)]="exampleIndex"
-          (ngModelChange)="onExampleChanged($event)"
-        >
-          <mat-radio-button [value]="1">Professions</mat-radio-button>
-          <mat-radio-button [value]="2">Countries</mat-radio-button>
-          <mat-radio-button [value]="3">Numbers</mat-radio-button>
-          <mat-radio-button [value]="4">Randmon</mat-radio-button>
-        </mat-radio-group>
+          <mat-button-toggle value="fab">FAB</mat-button-toggle>
+          <mat-button-toggle value="mini-fab">Mini FAB</mat-button-toggle>
+        </mat-button-toggle-group>
       </p>
 
+      <h4>Color</h4>
       <p>
-        Direction
-        <mat-radio-group
+        <mat-button-toggle-group
+          name="color"
+          aria-label="Select a color"
+          [(ngModel)]="color"
+        >
+          <mat-button-toggle value="primary">Primary</mat-button-toggle>
+          <mat-button-toggle value="accent">Accent</mat-button-toggle>
+          <mat-button-toggle value="warn">Warn</mat-button-toggle>
+        </mat-button-toggle-group>
+      </p>
+
+      <h4>Icons</h4>
+      <p>
+        <mat-button-toggle-group
+          name="icons"
+          aria-label="Select the icons"
+          [(ngModel)]="icons"
+          (ngModelChange)="onIconsChanged($event)"
+        >
+          <mat-button-toggle [value]="1">Professions</mat-button-toggle>
+          <mat-button-toggle [value]="2">Countries</mat-button-toggle>
+          <mat-button-toggle [value]="3">Numbers</mat-button-toggle>
+          <mat-button-toggle [value]="4">Randmon</mat-button-toggle>
+        </mat-button-toggle-group>
+      </p>
+
+      <h4>Direction</h4>
+      <p>
+        <mat-button-toggle-group
+          name="direction"
           aria-label="Select a direction"
           [(ngModel)]="direction"
-          (ngModelChange)="logDirection()"
+          (ngModelChange)="onDirectionChanged($event)"
         >
-          <mat-radio-button value="top">Top</mat-radio-button>
-          <mat-radio-button value="bottom">Bottom</mat-radio-button>
-          <mat-radio-button value="left">Left</mat-radio-button>
-          <mat-radio-button value="right">Right</mat-radio-button>
-        </mat-radio-group>
+          <mat-button-toggle value="top">Top</mat-button-toggle>
+          <mat-button-toggle value="bottom">Bottom</mat-button-toggle>
+          <mat-button-toggle value="left">Left</mat-button-toggle>
+          <mat-button-toggle value="right">Right</mat-button-toggle>
+        </mat-button-toggle-group>
       </p>
+
+      <h4>Options</h4>
       <p>
         <mat-slide-toggle #isActive>isActive</mat-slide-toggle>
       </p>
       <p>
         <mat-slide-toggle #disabled>disabled</mat-slide-toggle>
       </p>
-      <div
-        fxLayout="column"
-        [fxLayoutAlign]="layout"
-        [ngStyle.xs]="{ height: '60%' }"
-        [ngStyle.sm]="{ height: '70%' }"
-        style="height: 80%"
-      >
+
+      <div fxLayout="column" [fxLayoutAlign]="layout" [ngSwitch]="type">
         <mat-fab-menu
+          *ngSwitchCase="'fab'"
           [color]="color"
           [direction]="direction"
           [fabButtons]="exampleFabButtons"
           [isActive]="isActive.checked"
           [disabled]="disabled.checked"
-        >
-        </mat-fab-menu>
+        ></mat-fab-menu>
+
+        <mat-mini-fab-menu
+          *ngSwitchCase="'mini-fab'"
+          [color]="color"
+          [direction]="direction"
+          [fabButtons]="exampleFabButtons"
+          [isActive]="isActive.checked"
+          [disabled]="disabled.checked"
+        ></mat-mini-fab-menu>
       </div>
     </mat-card-content>
   </mat-card>
 
-  <!--    <mat-fab-menu color="primary" [fabButtons]="fabButtons" direction="top"></mat-fab-menu>-->
   <mat-fab-menu
     class="fix-bottom-right"
     color="primary"
     [fabButtons]="fabCountries"
     direction="top"
   ></mat-fab-menu>
+
+  <mat-mini-fab-menu
+    class="fix-bottom-left"
+    color="primary"
+    [fabButtons]="fabCountries"
+    direction="top"
+  ></mat-mini-fab-menu>
 
   <markdown src="assets/md/html.md"></markdown>
 
