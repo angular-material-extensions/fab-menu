@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.fullSVG {
+  img {
+    width: 100%;
+  }
+
+  ::ng-deep span.mat-button-wrapper {
+    padding: 0;
+  }
+}

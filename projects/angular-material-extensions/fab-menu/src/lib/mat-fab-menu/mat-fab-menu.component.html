@@ -1,19 +1,14 @@
 <div
   [fxLayout]="layout"
-  class="container"
   fxLayoutAlign="center center"
   fxLayoutGap="16px"
 >
   <div fxLayoutAlign="center">
     <button
+      mat-fab
       (click)="isActive = !isActive"
       [color]="color"
       [disabled]="disabled"
-      [ngClass]="{
-        'mat-fab': !isActive,
-        'mat-mini-fab': isActive
-      }"
-      mat-fab
     >
       <mat-icon [@fabToggler]="{ value: isActive }">{{ icon }}</mat-icon>
       <!-- Animation here -->

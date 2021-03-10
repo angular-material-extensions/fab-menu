@@ -5,10 +5,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MatFabMenuComponent } from './mat-fab-menu.component';
+import { MatFabMenuComponent } from './mat-fab-menu/mat-fab-menu.component';
+import { MatMiniFabMenuComponent } from './mat-mini-fab-menu/mat-mini-fab-menu.component';
 
 @NgModule({
-  declarations: [MatFabMenuComponent],
+  declarations: [MatFabMenuComponent, MatMiniFabMenuComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -16,6 +17,6 @@ import { MatFabMenuComponent } from './mat-fab-menu.component';
     MatTooltipModule,
     FlexLayoutModule,
   ],
-  exports: [MatFabMenuComponent],
+  exports: [MatFabMenuComponent, MatMiniFabMenuComponent],
 })
 export class MatFabMenuModule {}

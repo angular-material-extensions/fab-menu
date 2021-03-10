@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 
-import { speedDialFabAnimations } from '../animations/menu.animations';
+import { speedDialFabAnimations } from '../animations/menu.animation';
 
 import { MatFabMenu, MatFabMenuDirection } from '../models/mat-fab-menu.model';
 
@@ -28,11 +28,10 @@ export class MatMiniFabMenuComponent implements OnInit, OnChanges {
   @Input() disabled: boolean;
   @Input() closeAfterSelection = true;
 
-  // tslint:disable-next-line:no-output-on-prefix
   @Output() onFabMenuItemSelected = new EventEmitter<string | number>();
 
-  layout: any;
-  layout2: any;
+  layout: string;
+  layout2: string;
 
   constructor() {}
 
@@ -55,7 +54,7 @@ export class MatMiniFabMenuComponent implements OnInit, OnChanges {
     }
   }
 
-  adjustLayout() {
+  private adjustLayout() {
     switch (this.direction) {
       case 'top':
         this.layout = 'column-reverse';
