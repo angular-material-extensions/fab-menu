@@ -2,6 +2,7 @@
   <div fxLayoutAlign="center">
     <button (click)="isActive = !isActive"
             [color]="color" [disabled]="disabled"
+            type="button"
             [ngClass]="{
     'mat-fab' : !isActive,
     'mat-mini-fab' : isActive
@@ -18,6 +19,7 @@
             [matTooltip]="fab?.tooltip"
             [matTooltipPosition]="fab?.tooltipPosition"
             [ngClass]="{'fullSVG' : fab?.imgUrl}"
+            type="button"
             mat-fab>
       <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">{{fab?.icon}}</mat-icon>
       <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon">
