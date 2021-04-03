@@ -1,25 +1,32 @@
-mat-fab-menu.fix-bottom-right {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 100;
+mat-fab-menu {
+  &.fix-bottom-left {
+    position: fixed;
+    bottom: 15px;
+    z-index: 100;
+    left: 15px;
+  }
+
+  &.fix-bottom-right {
+    position: fixed;
+    bottom: 15px;
+    z-index: 100;
+    right: 15px;
+  }
 }
 
-
 .card-container-example {
-  height: 550px;
+  height: 500px;
   width: 70%;
 }
 
 mat-card-content {
   height: 100%;
+  position: relative;
 
   mat-fab-menu {
-    margin-bottom: 16px;
-  }
-
-  .mat-radio-button ~ .mat-radio-button {
-    margin-left: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 
   p {
@@ -31,4 +38,3 @@ markdown {
   max-width: 100%;
   margin: 4px;
 }
-

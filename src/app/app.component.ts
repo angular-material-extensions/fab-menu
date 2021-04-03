@@ -1,6 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {MatFabMenu, MatFabMenuDirection} from '@angular-material-extensions/fab-menu';
+import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+
+import {
+  MatFabMenu,
+  MatFabMenuDirection,
+  MatFabMenuType
+} from '@angular-material-extensions/fab-menu';
 
 @Component({
   selector: 'app-root',
@@ -9,32 +14,6 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class AppComponent implements OnInit {
   title = 'fab-menu';
-
-  direction: MatFabMenuDirection = 'top';
-
-  color: ThemePalette = 'primary';
-  exampleIndex = 1;
-  exampleFabButtons: MatFabMenu[];
-  layout = 'end end';
-
-  fabButtonsRandom: MatFabMenu[] = [
-    {
-      id: 1,
-      icon: 'create'
-    },
-    {
-      id: 2,
-      icon: 'mail'
-    },
-    {
-      id: 3,
-      icon: 'file_copy'
-    },
-    {
-      id: 4,
-      icon: 'phone'
-    },
-  ];
 
   fabProfessions: MatFabMenu[] = [
     {
@@ -52,9 +31,8 @@ export class AppComponent implements OnInit {
     {
       id: 4,
       imgUrl: 'assets/professions/svg/017-engineer.svg'
-    },
+    }
   ];
-
   fabCountries: MatFabMenu[] = [
     {
       id: 1,
@@ -79,9 +57,8 @@ export class AppComponent implements OnInit {
       imgUrl: 'assets/countrys-flags/svg/lebanon.svg',
       tooltip: 'lebanon',
       tooltipPosition: 'before'
-    },
+    }
   ];
-
   fabNumbers: MatFabMenu[] = [
     {
       id: 1,
@@ -102,38 +79,65 @@ export class AppComponent implements OnInit {
     {
       id: 5,
       imgUrl: 'assets/numbers/svg/five.svg'
+    }
+  ];
+  fabRandom: MatFabMenu[] = [
+    {
+      id: 1,
+      icon: 'create'
     },
+    {
+      id: 2,
+      icon: 'mail'
+    },
+    {
+      id: 3,
+      icon: 'file_copy'
+    },
+    {
+      id: 4,
+      icon: 'phone'
+    }
   ];
 
-  ngOnInit(): void {
-    this.exampleFabButtons = this.fabProfessions;
-  }
+  color: ThemePalette = 'primary';
+  direction: MatFabMenuDirection = 'top';
+  type: MatFabMenuType = 'fab';
+  fabButtons: MatFabMenu[] = this.fabCountries;
+  icons = 1;
+  layout = 'end end';
 
-  logDirection() {
-    if (this.direction === 'bottom') {
-      this.layout = 'start end';
-    } else if (this.direction === 'right') {
-      this.layout = 'start start';
-    } else {
-      this.layout = 'end end';
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onDirectionChanged($event: string): void {
+    switch ($event) {
+      case 'bottom':
+        this.layout = 'start end';
+        return;
+      case 'right':
+        this.layout = 'end start';
+        return;
+      default:
+        this.layout = 'end end';
+        return;
     }
   }
 
-  onExampleChanged($event: number) {
-    console.log('on example changed', $event);
+  onIconsChanged($event: number): void {
     switch ($event) {
       case 1:
-        this.exampleFabButtons = this.fabProfessions;
+        this.fabButtons = this.fabProfessions;
         return;
-
       case 2:
-        this.exampleFabButtons = this.fabCountries;
+        this.fabButtons = this.fabCountries;
         return;
       case 3:
-        this.exampleFabButtons = this.fabNumbers;
+        this.fabButtons = this.fabNumbers;
         return;
       case 4:
-        this.exampleFabButtons = this.fabButtonsRandom;
+        this.fabButtons = this.fabRandom;
         return;
     }
   }
