@@ -87,6 +87,7 @@
   },
   "prettier": {
     "singleQuote": true,
+    "trailingComma": "none",
     "overrides": [
       {
         "files": "*.scss",
