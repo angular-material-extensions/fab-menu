@@ -1,44 +1,88 @@
-<div
-  [fxLayout]="layout"
-  class="container"
-  fxLayoutAlign="center center"
-  fxLayoutGap="16px"
->
-  <div fxLayoutAlign="center">
-    <button
-      (click)="isActive = !isActive"
-      [color]="color"
-      [disabled]="disabled"
-      [ngClass]="{
-        'mat-fab': !isActive,
-        'mat-mini-fab': isActive
-      }"
-      mat-fab
-    >
-      <mat-icon [@fabToggler]="{ value: isActive }">{{ icon }}</mat-icon>
-      <!-- Animation here -->
-    </button>
-  </div>
+<ng-container [ngSwitch]="type">
   <div
-    *ngIf="isActive"
-    [@fabsStagger]="fabButtons.length"
-    [fxLayout]="layout2"
+    *ngSwitchCase="'fab'"
+    class="container"
+    [fxLayout]="layout"
+    fxLayoutAlign="center center"
+    fxLayoutGap="32px"
+  >
+    <div fxLayoutAlign="center">
+      <button
+        mat-fab
+        [color]="color"
+        [disabled]="disabled"
+        [ngClass]="{
+          'mat-fab': !isActive,
+          'mat-mini-fab': isActive
+        }"
+        (click)="isActive = !isActive"
+      >
+        <mat-icon [@fabToggler]="{ value: isActive }">{{ icon }}</mat-icon>
+      </button>
+    </div>
+    <div
+      *ngIf="isActive"
+      [@fabsStagger]="fabButtons.length"
+      [fxLayout]="layout2"
+      fxLayoutAlign="center center"
+      fxLayoutGap="32px"
+    >
+      <button
+        mat-fab
+        *ngFor="let fab of fabButtons"
+        [color]="fab?.color"
+        [matTooltip]="fab?.tooltip"
+        [matTooltipPosition]="fab?.tooltipPosition"
+        [ngClass]="{ fullSVG: fab?.imgUrl }"
+        (click)="selectFabMenu(fab)"
+      >
+        <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">
+          {{ fab?.icon }}
+        </mat-icon>
+        <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon" />
+      </button>
+    </div>
+  </div>
+
+  <div
+    *ngSwitchCase="'mini-fab'"
+    class="container"
+    [fxLayout]="layout"
     fxLayoutAlign="center center"
     fxLayoutGap="16px"
   >
-    <button
-      (click)="selectFabMenu(fab)"
-      *ngFor="let fab of fabButtons"
-      [color]="fab?.color"
-      [matTooltip]="fab?.tooltip"
-      [matTooltipPosition]="fab?.tooltipPosition"
-      [ngClass]="{ fullSVG: fab?.imgUrl }"
-      mat-fab
+    <div fxLayoutAlign="center">
+      <button
+        mat-mini-fab
+        [color]="color"
+        [disabled]="disabled"
+        (click)="isActive = !isActive"
+      >
+        <mat-icon [@fabToggler]="{ value: isActive }">{{ icon }}</mat-icon>
+        <!-- Animation here -->
+      </button>
+    </div>
+    <div
+      *ngIf="isActive"
+      [@fabsStagger]="fabButtons.length"
+      [fxLayout]="layout2"
+      fxLayoutAlign="center center"
+      fxLayoutGap="16px"
     >
-      <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">{{
-        fab?.icon
-      }}</mat-icon>
-      <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon" />
-    </button>
+      <button
+        mat-mini-fab
+        *ngFor="let fab of fabButtons"
+        [color]="fab?.color"
+        [matTooltip]="fab?.tooltip"
+        [matTooltipPosition]="fab?.tooltipPosition"
+        [ngClass]="{ fullSVG: fab?.imgUrl }"
+        (click)="selectFabMenu(fab)"
+      >
+        <mat-icon *ngIf="fab?.icon" [color]="fab?.iconColor">
+          {{ fab?.icon }}
+        </mat-icon>
+        <img *ngIf="fab?.imgUrl" [src]="fab?.imgUrl" alt="icon" />
+      </button>
+    </div>
   </div>
-</div>
+</ng-container>

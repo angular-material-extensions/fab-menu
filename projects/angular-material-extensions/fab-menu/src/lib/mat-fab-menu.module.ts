@@ -14,8 +14,8 @@ import { MatFabMenuComponent } from './mat-fab-menu.component';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    FlexLayoutModule,
+    FlexLayoutModule
   ],
-  exports: [MatFabMenuComponent],
+  exports: [MatFabMenuComponent]
 })
 export class MatFabMenuModule {}

@@ -5,7 +5,7 @@ import {
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges,
+  SimpleChanges
 } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { TooltipPosition } from '@angular/material/tooltip';
@@ -24,13 +24,18 @@ export interface MatFabMenu {
 
 export type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
 
+export type MatFabMenuType = 'fab' | 'mini-fab';
+
 @Component({
   selector: 'mat-fab-menu',
   templateUrl: 'mat-fab-menu.component.html',
   styleUrls: ['mat-fab-menu.component.scss'],
-  animations: speedDialFabAnimations,
+  animations: speedDialFabAnimations
 })
 export class MatFabMenuComponent implements OnInit, OnChanges {
+  @Input()
+  type: MatFabMenuType = 'fab';
+
   @Input()
   fabButtons: MatFabMenu[];
 
@@ -58,8 +63,8 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
     string | number
   >();
 
-  layout: any;
-  layout2: any;
+  layout: string;
+  layout2: string;
 
   constructor() {}
 
@@ -82,7 +87,7 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
     }
   }
 
-  adjustLayout() {
+  private adjustLayout() {
     switch (this.direction) {
       case 'top':
         this.layout = 'column-reverse';
