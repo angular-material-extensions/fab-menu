@@ -16,7 +16,6 @@
 [![devDependency Status](https://david-dm.org/angular-material-extensions/fab-menu/dev-status.svg?branch=master)](https://david-dm.org/angular-material-extensions/fab-menu#info=devDependencies)
 [![license](https://img.shields.io/github/license/angular-material-extensions/fab-menu.svg?style=flat-square)](https://github.com/angular-material-extensions/fab-menu/blob/master/LICENSE)
 
-
 <p align="center">
   <img alt="@angular-material-extensions/fab-menu demonstration" style="text-align: center;"
    src="https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/v1/ex1.gif">
@@ -28,6 +27,7 @@
 </p>
 
 ## Built by and for developers :heart:
+
 Do you have any question or suggestion ? Please do not hesitate to contact us!
 Alternatively, provide a PR | open an appropriate issue [here](https://github.com/angular-material-extensions/fab-menu/issues)
 
@@ -35,6 +35,7 @@ If you like this project, support [angular-material-extensions](https://github.c
 by starring :star: and sharing it :loudspeaker:
 
 ## Table of Contents
+
 - [Demo](#demo)
 - [Components](#components)
 - [Dependencies](#dependencies)
@@ -55,84 +56,82 @@ View all the directives and components in action at [https://angular-material-ex
 <a name="components"/>
 
 ## Library's components
-- `<mat-fab-menu>` used to display the main component
 
+- `<mat-fab-menu>` used to display the main component
 
 ---
 
 <a name="dependencies"/>
 
 ## Dependencies
-* [Angular](https://angular.io) developed and tested with `8.x`
+
+- [Angular](https://angular.io) developed and tested with `11.x`
 
 ---
 
 <a name="installation"/>
 
-##  [Installation](https://angular-material-extensions.github.io/fab-menu/getting-started)
+## [Installation](https://angular-material-extensions.github.io/fab-menu/getting-started)
 
-## 1. Install via *ng add*. (Recommended)
+## 1. Install via _ng add_. (Recommended)
 
 If Angular Material Design is not setup, just run `ng add @angular/material` [learn more](https://material.angular.io/guide/getting-started)
 
 Now add the library via the `angular schematics`
+
 ```shell
 ng add @angular-material-extensions/fab-menu
 ```
 
-## 2. Install via *npm*. (Alternative)
+## 2. Install via _npm_. (Alternative)
 
 Now install `@angular-material-extensions/fab-menu` via:
+
 ```shell
 npm install --save @angular-material-extensions/fab-menu
 ```
-
 
 ### Import the library
 
 If you installed the library via angular schematics, you can skip this step
 
 Once installed you need to import the main module:
-```js
-import { MatFabMenuModule } from '@angular-material-extensions/fab-menu';
-```
 
 ```typescript
-import { MatFabMenuModule } from '@angular-material-extensions/fab-menu';
+import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
 
 @NgModule({
   declarations: [AppComponent, ...],
-  imports: [MatFabMenuModule, ...],  
+  imports: [MatFabMenuModule, ...],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
 ```
 
-Other modules in your application like for lazy loading import ` MatSelectCountryModule ` into your feature module:
-
+Other modules in your application like for lazy loading import `MatSelectCountryModule` into your feature module:
 
 <a name="api"/>
 
 ## API
 
-### `<mat-fab-menu>`  used to display the main component - [see the demo examples](https://angular-material-extensions.github.io/fab-menu/examples)
+### `<mat-fab-menu>` used to display the main component - [see the demo examples](https://angular-material-extensions.github.io/fab-menu/examples)
 
-| option | bind  |  type  |   default    | description  |
-|:-------------------|:--------:|:------:|:------------:|:-------------------------------------------------------------------------------------------------|    
-| fabButtons      | `Input()`  | `MatFabMenu[]`    | - |  array of floating actions button as menu to render
-| icon      | `Input()`  | `string`    | `add` |  material icon string e.g: home, mail, phone [see more](https://material.io/resources/icons/?style=baseline)
-| direction      | `Input()`  | `MatFabMenuDirection`    | `top` |  the direction of buttons: `'top' | 'bottom' | 'left' | 'right';`
-| color      | `Input()`  | `ThemePalette`    | `accent` |  the color of the main fab: primary, accent or warn
-| isActive      | `Input()`  | `boolean`    | `falase` |  Whether the component is active
-| disabled      | `Input()`  | `boolean`    | `false` |  Whether the component is disabled
-| closeAfterSelection      | `Input()`  | `boolean`    | `true` | Close after selecting a fab menu item
-| onFabMenuItemSelected  | `Output()` | `EventEmitter<string \| number>`    | - | emits the selected button by id
+| option                |    bind    |               type               | default  | description                                                                                                 |
+| :-------------------- | :--------: | :------------------------------: | :------: | :---------------------------------------------------------------------------------------------------------- | ----------- | ------ | -------- |
+| fabButtons            | `Input()`  |          `MatFabMenu[]`          |    -     | array of floating actions button as menu to render                                                          |
+| icon                  | `Input()`  |             `string`             |  `add`   | material icon string e.g: home, mail, phone [see more](https://material.io/resources/icons/?style=baseline) |
+| direction             | `Input()`  |      `MatFabMenuDirection`       |  `top`   | the direction of buttons: `'top'                                                                            | 'bottom'    | 'left' | 'right'` |
+| color                 | `Input()`  |          `ThemePalette`          | `accent` | the color of the main fab: primary, accent or warn                                                          |
+| type                  | `Input()`  |         `MatFabMenuType`         |  `fab`   | the type of the buttons: `'fab'                                                                             | 'mini-fab'` |
+| isActive              | `Input()`  |            `boolean`             | `false`  | Whether the component is active                                                                             |
+| disabled              | `Input()`  |            `boolean`             | `false`  | Whether the component is disabled                                                                           |
+| closeAfterSelection   | `Input()`  |            `boolean`             |  `true`  | Close after selecting a fab menu item                                                                       |
+| onFabMenuItemSelected | `Output()` | `EventEmitter<string \| number>` |    -     | emits the selected button by id                                                                             |
 
 ### Methods
 
 ```typescript
-@ViewChild('matFabMenu', { static: false }) matFabMenu: MatFabMenu;
+@ViewChild(MatFabMenu) matFabMenu: MatFabMenu;
 ```
 
 `toggle()` will toggle the `isActive` property
@@ -140,8 +139,7 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 Important interfaces or type
 
 ```typescript
-
-import {ThemePalette, TooltipPosition} from '@angular/material';
+import { ThemePalette, TooltipPosition } from '@angular/material';
 
 interface MatFabMenu {
   id: string | number;
@@ -154,40 +152,39 @@ interface MatFabMenu {
 }
 
 type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
-```
 
+type MatFabMenuType = 'fab' | 'mini-fab';
+```
 
 <a name="usage"/>
 
 ## [Usage](https://angular-material-extensions.github.io/fab-menu)
 
 ```html
-<mat-fab-menu color="primary"
-              [fabButtons]="fabButtonsRandom">
-</mat-fab-menu>
+<mat-fab-menu color="primary" [fabButtons]="fabButtonsRandom"> </mat-fab-menu>
 ```
 
 ```typescript
 import {MatFabMenu} from '@angular-material-extensions/fab-menu';
 
 fabButtonsRandom: MatFabMenu[] = [
-    {
-      id: 1,
-      icon: 'create'
-    },
-    {
-      id: 2,
-      icon: 'mail'
-    },
-    {
-      id: 3,
-      icon: 'file_copy'
-    },
-    {
-      id: 4,
-      icon: 'phone'
-    },
-  ];
+  {
+    id: 1,
+    icon: 'create'
+  },
+  {
+    id: 2,
+    icon: 'mail'
+  },
+  {
+    id: 3,
+    icon: 'file_copy'
+  },
+  {
+    id: 4,
+    icon: 'phone'
+  },
+];
 ```
 
 try to use your own svg instead of material icons:
@@ -196,29 +193,27 @@ try to use your own svg instead of material icons:
 import {MatFabMenu} from '@angular-material-extensions/fab-menu';
 
 fabCountries: MatFabMenu[] = [
-    {
-      id: 1,
-      imgUrl: 'assets/countrys-flags/svg/canada.svg'
-    },
-    {
-      id: 2,
-      imgUrl: 'assets/countrys-flags/svg/germany.svg'
-    },
-    {
-      id: 3,
-      imgUrl: 'assets/countrys-flags/svg/france.svg'
-    },
-    {
-      id: 4,
-      imgUrl: 'assets/countrys-flags/svg/lebanon.svg'
-    },
-  ];
+  {
+    id: 1,
+    imgUrl: 'assets/countrys-flags/svg/canada.svg'
+  },
+  {
+    id: 2,
+    imgUrl: 'assets/countrys-flags/svg/germany.svg'
+  },
+  {
+    id: 3,
+    imgUrl: 'assets/countrys-flags/svg/france.svg'
+  },
+  {
+    id: 4,
+    imgUrl: 'assets/countrys-flags/svg/lebanon.svg'
+  },
+];
 ```
 
 ```html
-<mat-fab-menu color="primary"
-              [fabButtons]="fabButtonsRandom">
-</mat-fab-menu>
+<mat-fab-menu color="primary" [fabButtons]="fabButtonsRandom"> </mat-fab-menu>
 ```
 
 <p align="center">
@@ -227,9 +222,11 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary"
-              direction="bottom"
-              [fabButtons]="fabButtonsRandom">
+<mat-fab-menu
+  color="primary"
+  direction="bottom"
+  [fabButtons]="fabButtonsRandom"
+>
 </mat-fab-menu>
 ```
 
@@ -239,9 +236,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary"
-              direction="left"
-              [fabButtons]="fabButtonsRandom">
+<mat-fab-menu color="primary" direction="left" [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
 ```
 
@@ -251,9 +246,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 
 ```html
-<mat-fab-menu color="primary"
-              direction="right"
-              [fabButtons]="fabButtonsRandom">
+<mat-fab-menu color="primary" direction="right" [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
 ```
 
@@ -263,8 +256,7 @@ fabCountries: MatFabMenu[] = [
 </p>
 <a name="run-demo-app-locally"/>
 
-###  Run Demo App Locally
-
+### Run Demo App Locally
 
 Build the library
 
@@ -280,9 +272,8 @@ Serve the demo app
 $ npm start
 ```
 
-
-
 ## Other Angular Libraries
+
 - [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
 - [ngx-linkifyjs](https://github.com/AnthonyNahas/ngx-linkifyjs)
 - [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
@@ -298,11 +289,12 @@ $ npm start
 <a name="support"/>
 
 ## Support
-+ Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
-+ or open an appropriate [issue](https://github.com/angular-material-extensions/fab-menu/issues)
-+ let us chat on [Gitter](https://gitter.im/angular-material-extensions/Lobby)
 
- Built by and for developers :heart: we will help you :punch:
+- Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
+- or open an appropriate [issue](https://github.com/angular-material-extensions/fab-menu/issues)
+- let us chat on [Gitter](https://gitter.im/angular-material-extensions/Lobby)
+
+Built by and for developers :heart: we will help you :punch:
 
 ---
 
