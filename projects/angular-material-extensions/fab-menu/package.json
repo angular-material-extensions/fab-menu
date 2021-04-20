@@ -1,7 +1,7 @@
 {
   "name": "@angular-material-extensions/fab-menu",
   "description": "Angular Material component that allow users to select a county or nationality ",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://angular-material-extensions.github.io/fab-menu",
   "author": {
     "name": "anthonynahas",
@@ -47,10 +47,10 @@
     "test:watch": "../../../node_modules/.bin/jest --coverage --watch"
   },
   "peerDependencies": {
-    "@angular/common": "^10.1.0",
-    "@angular/core": "^10.1.0",
-    "@angular/cdk": "~10.2.0",
-    "@angular/material": "~10.2.0"
+    "@angular/common": "^11.2.x",
+    "@angular/core": "^11.2.x",
+    "@angular/cdk": "~11.x",
+    "@angular/material": "~11.x"
   },
   "engines": {
     "node": ">=10.13"
