@@ -1,7 +1,7 @@
 {
   "name": "@angular-material-extensions/fab-menu",
   "description": "Angular Material component that allow users to select a county or nationality ",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://angular-material-extensions.github.io/fab-menu",
   "author": {
     "name": "anthonynahas",
@@ -36,7 +36,7 @@
     "lint": "../../../node_modules/.bin/ng lint @angular-material-extensions/fab-menu",
     "resync:schematics": "rsync -a schematics/collection.json ../../../dist/angular-material-extensions/fab-menu/schematics/",
     "resync:readme": "rsync -a ../../../README.md ../../../dist/angular-material-extensions/fab-menu/",
-    "postbuild": "npm run build:schematics && npm run resync:readme",
+    "postbuild": "npm run resync:readme",
     "prepublish": "npm run build",
     "release:patch": "../../../node_modules/.bin/release-it --patch --ci",
     "release:minor": "../../../node_modules/.bin/release-it --minor --ci",
