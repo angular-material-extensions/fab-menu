@@ -124,7 +124,7 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 | icon      | `Input()`  | `string`    | `add` |  material icon string e.g: home, mail, phone [see more](https://material.io/resources/icons/?style=baseline)
 | direction      | `Input()`  | `MatFabMenuDirection`    | `top` |  the direction of buttons: `'top' | 'bottom' | 'left' | 'right';`
 | color      | `Input()`  | `ThemePalette`    | `accent` |  the color of the main fab: primary, accent or warn
-| isActive      | `Input()`  | `boolean`    | `falase` |  Whether the component is active
+| isActive      | `Input()`  | `boolean`    | `false` |  Whether the component is active
 | disabled      | `Input()`  | `boolean`    | `false` |  Whether the component is disabled
 | closeAfterSelection      | `Input()`  | `boolean`    | `true` | Close after selecting a fab menu item
 | onFabMenuItemSelected  | `Output()` | `EventEmitter<string \| number>`    | - | emits the selected button by id
