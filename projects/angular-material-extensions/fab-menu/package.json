@@ -1,7 +1,7 @@
 {
   "name": "@angular-material-extensions/fab-menu",
   "description": "Angular Material component that allow users to select a county or nationality ",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "homepage": "https://angular-material-extensions.github.io/fab-menu",
   "author": {
     "name": "anthonynahas",
@@ -41,16 +41,16 @@
     "release:patch": "../../../node_modules/.bin/release-it --patch --ci",
     "release:minor": "../../../node_modules/.bin/release-it --minor --ci",
     "release:major": "../../../node_modules/.bin/release-it --major --ci",
-    "release:version": "../../../node_modules/.bin/release-it 3.0.1 --ci --no-git.requireCleanWorkingDir",
+    "release:version": "../../../node_modules/.bin/release-it 4.0.0 --ci --no-git.requireCleanWorkingDir",
     "ng:test": "../../../node_modules/.bin/ng test @angular-material-extensions/fab-menu",
     "test": "../../../node_modules/.bin/jest --coverage",
     "test:watch": "../../../node_modules/.bin/jest --coverage --watch"
   },
   "peerDependencies": {
-    "@angular/common": "^11.2.x",
-    "@angular/core": "^11.2.x",
-    "@angular/cdk": "~11.x",
-    "@angular/material": "~11.x"
+    "@angular/common": "^13.x",
+    "@angular/core": "^13.x",
+    "@angular/cdk": "~13.x",
+    "@angular/material": "~13.x"
   },
   "engines": {
     "node": ">=10.13"
