@@ -1,3 +1,5 @@
+* fix(docs): minor (8495c05)
+
 * fix(lib): upgraded angular material to v14 (1c2a4cf)
 * fix(lib): upgraded angular to v14 (14c16e5)
 * fix(lib): minor (e6a96b4)
