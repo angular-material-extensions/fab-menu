@@ -1,3 +1,9 @@
+* Merge remote-tracking branch 'origin/master' (6d64fdf)
+* Release 5.0.0 (90ecd5c)
+* Updating CHANGELOG.md for v5.0.0 (2169506)
+* fix(docs): minor (8495c05)
+* Create FUNDING.yml (611bf68)
+
 * fix(docs): minor (8495c05)
 
 * fix(lib): upgraded angular material to v14 (1c2a4cf)
