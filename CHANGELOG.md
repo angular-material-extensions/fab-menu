@@ -1,5 +1,13 @@
 
 
+# [6.1.0](https://github.com/angular-material-extensions/fab-menu/compare/6.0.0...6.1.0) (2022-12-19)
+
+
+### Features
+
+* **lib:** implemented mat-mini-fab-menu component ([abfbbaa](https://github.com/angular-material-extensions/fab-menu/commit/abfbbaa721ccfa8ab558f27e83590a5caff4399b))
+* **lib:** implemented mat-mini-fab-menu component [#6](https://github.com/angular-material-extensions/fab-menu/issues/6) ([9650185](https://github.com/angular-material-extensions/fab-menu/commit/965018544257f73319cb1f75f1be83def362f27d))
+
 # [6.0.0](https://github.com/angular-material-extensions/fab-menu/compare/5.1.0...6.0.0) (2022-12-19)
 
 
