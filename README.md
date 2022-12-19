@@ -115,6 +115,7 @@ Other modules in your application like for lazy loading import ` MatSelectCountr
 ## API
 
 ### `<mat-fab-menu>`  used to display the main component - [see the demo examples](https://angular-material-extensions.github.io/fab-menu/examples)
+### `<mat-mini-fab-menu>`  used to display a mini version of the fab menu - [see the demo examples](https://angular-material-extensions.github.io/fab-menu/examples)
 
 | option | bind  |  type  |   default    | description  |
 |:-------------------|:--------:|:------:|:------------:|:-------------------------------------------------------------------------------------------------|    
@@ -163,6 +164,13 @@ type MatFabMenuDirection = 'top' | 'bottom' | 'left' | 'right';
 <mat-fab-menu color="primary"
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
+
+<!-- or if you prefer the mini version -->
+
+<mat-mini-fab-menu color="primary"
+                   [fabButtons]="fabButtonsRandom">
+</mat-mini-fab-menu>
+
 ```
 
 ```typescript

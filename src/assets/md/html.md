@@ -2,6 +2,12 @@
 <mat-fab-menu color="primary" 
               [fabButtons]="fabButtonsRandom">
 </mat-fab-menu>
+
+<!-- or if you prefer the mini version -->
+
+<mat-mini-fab-menu color="primary"
+              [fabButtons]="fabButtonsRandom">
+</mat-mini-fab-menu>
 ```
 
 ```typescript

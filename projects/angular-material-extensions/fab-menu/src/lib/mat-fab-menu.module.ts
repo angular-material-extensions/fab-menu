@@ -8,7 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMiniFabMenuComponent} from './mat-mini-fab-menu/mat-mini-fab-menu.component';
 
 @NgModule({
-  declarations: [MatFabMenuComponent, MatMiniFabMenuComponent, MatMiniFabMenuComponent],
+  declarations: [MatFabMenuComponent, MatMiniFabMenuComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -16,7 +16,7 @@ import {MatMiniFabMenuComponent} from './mat-mini-fab-menu/mat-mini-fab-menu.com
     MatTooltipModule,
     FlexLayoutModule
   ],
-  exports: [MatFabMenuComponent]
+  exports: [MatFabMenuComponent, MatMiniFabMenuComponent]
 })
 export class MatFabMenuModule {
 }
