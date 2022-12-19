@@ -1,3 +1,19 @@
+
+
+# [6.0.0](https://github.com/angular-material-extensions/fab-menu/compare/5.1.0...6.0.0) (2022-12-19)
+
+
+### Bug Fixes
+
+* **lib:** adjust lib for v15 ([3928c34](https://github.com/angular-material-extensions/fab-menu/commit/3928c3411d05c6c7aaf77a5208e7c06375c6aa01))
+* **lib:** minor in readme ([d31df95](https://github.com/angular-material-extensions/fab-menu/commit/d31df95d91ca2f01169e8ca2ff1d3a9fdb0a3bc7))
+* **lib:** updated release it ([4cd91e8](https://github.com/angular-material-extensions/fab-menu/commit/4cd91e8148ae078e8e9a734ee7188a92d0017ba8))
+* **lib:** upgraded angular core and cli ([674c13c](https://github.com/angular-material-extensions/fab-menu/commit/674c13ca96a9ed2a056f45c6468df6427ad10140))
+* **lib:** upgraded angular material ([0a9abb9](https://github.com/angular-material-extensions/fab-menu/commit/0a9abb9ca99c449445886bbce5f0792f365e0735))
+* **lib:** upgraded angular universal ([3a39480](https://github.com/angular-material-extensions/fab-menu/commit/3a39480f436d38610a96ce14a16bd22409f65140))
+* **lib:** upgraded angular universal ([8b650dc](https://github.com/angular-material-extensions/fab-menu/commit/8b650dc2dc18be77bff35e3d9142029be7ce1cf1))
+* **lib:** upgraded angular universal ([38962ed](https://github.com/angular-material-extensions/fab-menu/commit/38962ed3c82c2ec8977f2ec0b37887204f12529d))
+
 * fix(lib): upgraded angular universal (73642c3)
 * Merge remote-tracking branch 'origin/master' (1b7d865)
 * fix(lib): upgraded angular cdk and material to the latest version (ea6dfd5)
@@ -168,4 +184,3 @@
 * **lib:** generated the library ([9730f6c](https://github.com/angular-material-extensions/fab-menu/commit/9730f6c8ca1026ae22737cb25970638806a7eb9b))
 * **project:** added angular material to the project ([88b061c](https://github.com/angular-material-extensions/fab-menu/commit/88b061cba72dc360cc3881c49952ffc9e98f41d5))
 * **project:** support of prerendering ([a004bec](https://github.com/angular-material-extensions/fab-menu/commit/a004bec5a02037ad996c16644ff5be9a65387340))
-
