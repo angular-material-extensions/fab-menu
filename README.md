@@ -304,6 +304,13 @@ $ npm start
 
 ---
 
+## Who is using ngx-mailto? Awesome apps?
+
+1. [Nahaus.de](https://nahaus.de)
+
+
+Are you missing your project or you app? PR me to publish it on the README
+
 ![jetbrains logo](https://raw.githubusercontent.com/angular-material-extensions/fab-menu/HEAD/assets/jetbrains-variant-4_logos/jetbrains-variant-4.png)
 
 This project is supported by [jetbrains](https://www.jetbrains.com/) with 1 ALL PRODUCTS PACK OS LICENSE incl. [webstorm](https://www.jetbrains.com/webstorm)
