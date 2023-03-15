@@ -14,10 +14,6 @@ mat-fab-menu.fix-bottom-right {
 mat-card-content {
   height: 100%;
 
-  mat-fab-menu {
-    margin-bottom: 16px;
-  }
-
   .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
   }
@@ -31,4 +27,3 @@ markdown {
   max-width: 100%;
   margin: 4px;
 }
-

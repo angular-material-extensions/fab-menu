@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   title = 'fab-menu';
 
   direction: MatFabMenuDirection = 'top';
+  buttonSize = 1;
 
   color: ThemePalette = 'primary';
   exampleIndex = 1;
   exampleFabButtons: MatFabMenu[];
-  layout = 'end end';
 
   fabButtonsRandom: MatFabMenu[] = [
     {
@@ -109,23 +109,12 @@ export class AppComponent implements OnInit {
     this.exampleFabButtons = this.fabProfessions;
   }
 
-  logDirection() {
-    if (this.direction === 'bottom') {
-      this.layout = 'start end';
-    } else if (this.direction === 'right') {
-      this.layout = 'start start';
-    } else {
-      this.layout = 'end end';
-    }
-  }
-
   onExampleChanged($event: number) {
     console.log('on example changed', $event);
     switch ($event) {
       case 1:
         this.exampleFabButtons = this.fabProfessions;
         return;
-
       case 2:
         this.exampleFabButtons = this.fabCountries;
         return;
