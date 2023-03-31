@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatFabMenu, MatFabMenuDirection} from '@angular-material-extensions/fab-menu';
+import {MatFabMenu, MatFabMenuDirection} from '../../projects/angular-material-extensions/fab-menu/src/lib/mat-fab-menu.component';
 import { ThemePalette } from '@angular/material/core';
 
 @Component({
@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   exampleIndex = 1;
   exampleFabButtons: MatFabMenu[];
   layout = 'end end';
+  icon: string = 'menu';
 
   fabButtonsRandom: MatFabMenu[] = [
     {
@@ -117,6 +118,20 @@ export class AppComponent implements OnInit {
     } else {
       this.layout = 'end end';
     }
+  }
+
+  onFabMenuToggled(open: boolean) {
+    console.log('on menu toggled', open);
+
+    if (open) {
+      this.icon = "add";
+    } else {
+      this.icon = "menu";
+    }
+  }
+
+  onFabMenuItemSelected(item: any) {
+    console.log('on menu item selected', item);
   }
 
   onExampleChanged($event: number) {

@@ -47,6 +47,10 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
   @Output()
   onFabMenuItemSelected: EventEmitter<string | number> = new EventEmitter<string | number>();
 
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output()
+  onFabMenuToggled: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   layout: any;
   layout2: any;
 
@@ -98,12 +102,14 @@ export class MatFabMenuComponent implements OnInit, OnChanges {
 
   toggle() {
     this.isActive = !this.isActive;
+    this.onFabMenuToggled.emit(this.isActive);
   }
 
   selectFabMenu(fab: MatFabMenu) {
     this.onFabMenuItemSelected.emit(fab.id);
     if (this.closeAfterSelection) {
       this.isActive = false;
+      this.onFabMenuToggled.emit(false);
     }
   }
 }
