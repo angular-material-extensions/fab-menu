@@ -7,7 +7,7 @@ import {Angulartics2Module} from 'angulartics2';
 import {MarkdownModule} from 'ngx-markdown';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
-import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
+import {MatFabMenuModule} from '../../projects/angular-material-extensions/fab-menu/src/lib/mat-fab-menu.module';
 import {FormsModule} from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';

@@ -1,6 +1,6 @@
 <div [fxLayout]="layout" class="container" fxLayoutAlign="center center" fxLayoutGap="16px">
   <div fxLayoutAlign="center">
-    <button (click)="isActive = !isActive"
+    <button (click)="toggle()"
             [color]="color" [disabled]="disabled"
             type="button"
             [ngClass]="{

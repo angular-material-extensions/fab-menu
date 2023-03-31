@@ -497,7 +497,14 @@
   </mat-card>
 
   <!--    <mat-fab-menu color="primary" [fabButtons]="fabButtons" direction="top"></mat-fab-menu>-->
-  <mat-fab-menu class="fix-bottom-right" color="primary" [fabButtons]="fabCountries" direction="top"></mat-fab-menu>
+  <mat-fab-menu class="fix-bottom-right" 
+                [icon]="icon"
+                color="primary" 
+                [fabButtons]="fabCountries" 
+                direction="top"
+                (onFabMenuToggled)="onFabMenuToggled($event)"
+                (onFabMenuItemSelected)="onFabMenuItemSelected($event)">
+  </mat-fab-menu>
 
 
     <markdown src="assets/md/html.md"></markdown>
