@@ -435,7 +435,7 @@
   <h2>Usage</h2>
 
   <mat-card class="card-container-example">
-    <mat-card-content>
+    <mat-card-content style="display: flex; flex-direction: column">
       <p>
         Color:
         <mat-radio-group aria-label="Select an example option"
@@ -458,10 +458,9 @@
       </p>
 
       <p>
-        Direction
+        Direction:
         <mat-radio-group aria-label="Select a direction"
-                         [(ngModel)]="direction"
-                         (ngModelChange)="logDirection()">
+                         [(ngModel)]="direction">
           <mat-radio-button value="top">Top</mat-radio-button>
           <mat-radio-button value="bottom">Bottom</mat-radio-button>
           <mat-radio-button value="left">Left</mat-radio-button>
@@ -469,24 +468,31 @@
         </mat-radio-group>
       </p>
       <p>
+        Button size:
+        <mat-radio-group aria-label="Select the button size"
+                         [(ngModel)]="buttonSize">
+          <mat-radio-button [value]="1">Normal</mat-radio-button>
+          <mat-radio-button [value]="2">Mini</mat-radio-button>
+        </mat-radio-group>
+      </p>
+
+      <p>
         <mat-slide-toggle #isActive>isActive</mat-slide-toggle>
       </p>
       <p>
         <mat-slide-toggle #disabled>disabled</mat-slide-toggle>
       </p>
-      <div fxLayout="column"
-           [fxLayoutAlign]="layout"
-           [ngStyle.xs]="{'height':'60%'}"
-           [ngStyle.sm]="{'height':'70%'}"
-           style="height: 80%">
-        <mat-fab-menu [color]="color"
+      <div style="flex: 1 1 0px">
+        <mat-fab-menu *ngIf="buttonSize === 1"
+                      [color]="color"
                       [direction]="direction"
                       [fabButtons]="exampleFabButtons"
                       [isActive]="isActive.checked"
                       [disabled]="disabled.checked">
         </mat-fab-menu>
 
-        <mat-mini-fab-menu [color]="color"
+        <mat-mini-fab-menu *ngIf="buttonSize === 2"
+                      [color]="color"
                       [direction]="direction"
                       [fabButtons]="exampleFabButtons"
                       [isActive]="isActive.checked"
